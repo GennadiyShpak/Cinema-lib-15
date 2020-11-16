@@ -1,3 +1,10 @@
-body {
-  background: tomato;
+html {
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+:root {
+  --header-collor: #ffffff;
+  --main-color: #000000;
+  --decor-color: #ff6b08;
+  --error-color: #ff001b;
 }
