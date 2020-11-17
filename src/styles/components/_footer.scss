@@ -1,0 +1,28 @@
+.footer .container{
+background-color: var(--footer-bg-color);
+display: block
+}
+
+.copyright-bottom{
+    display: flex;
+}
+
+.footer-content {
+  padding-top: 30px;
+  padding-bottom: 28px;
+  text-align: center;
+ 
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: no wrap;
+    align-content: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1024 px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
