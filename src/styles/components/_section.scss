@@ -1,3 +1,138 @@
+h1 {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+ul {
+  padding: 0px;
+  list-style: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+main {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+
+.starter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+  }
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    justify-content: space-around;
+    width: 900px;
+  }
+}
+
+.film-item {
+  margin-bottom: 30px;
+
+  img {
+    margin-bottom: 10px;
+    width: 280px;
+    @media screen and (min-width: 768px) {
+      width: 294px;
+    }
+    @media screen and (min-width: 1024px) {
+      width: 274px;
+    }
+  }
+  h2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: black;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #ff6b08;
+    margin: 0;
+  }
+}
+
+.bottom-navigation {
+  display: flex;
+  align-items: center;
+  // min-width: 200px;
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    margin-left: 16px;
+
+    li {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+
+      button {
+        background-color: transparent;
+      }
+
+      .none {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .active {
+    padding: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 5px;
+    background-color: var(--decor-color);
+    color: white;
+  }
+  button {
+    background-color: transparent;
+    padding: 12px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+
 .section {
   background-color: var(--header-collor);
   min-width: 320px;
