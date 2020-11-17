@@ -1,20 +1,15 @@
 .container {
   margin-left: 0 auto;
-  padding: 0 20px 0 20px;
-
-  @include for-size(mobile-sm) {
-    max-width: 400px;
-  }
-
-  @include for-size(mobile) {
-    max-width: 767px;
-  }
-
+  padding: 0 20px;
+  max-width: 400px;
+  
   @include for-size(tablet) {
+    padding: 0 76px;
     width: 768px;
   }
 
   @include for-size(desktop) {
+    padding: 0 72px;
     width: 1024px;
   }
 

@@ -6,8 +6,141 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
   </head>
-  <body></body>
-  <footer class="footer-conteiner">
+
+  <body>
+   <header>
+      <div>
+        <span>Filmoteka</span>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            Home
+          </li>
+          <li>
+            my library
+          </li>
+        </ul>
+      </nav>
+      <form action="" name="searchFilm">
+        <input type="text" placeholder="my library" id="search">
+      </form>
+      <p class="search_error">Search result not successful. Enter the correct movie name and </p>
+    </header>
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="card-wrapper">
+          <div class="card-img">
+            <img src="./imgs/film1.jpg" alt="movie 1" />
+          </div>
+          <div>
+            <div class="card-header">
+              <h1 class="card-title">A FISTFUL OF LEAD</h1>
+            </div>
+            <div class="rating">
+              <ul class="rating-title">
+                <li>Vote / Votes</li>
+                <li>Popularity</li>
+                <li>Original Title</li>
+                <li>Genre</li>
+              </ul>
+              <ul class="rating-data">
+                <li>
+                  <span class="first">7.3</span> /
+                  <span class="second">1260</span>
+                </li>
+                <li>100.2</li>
+                <li>A FISTFUL OF LEAD</li>
+                <li>Western</li>
+              </ul>
+            </div>
+            <div class="descript">
+              <p class="descript-title">About</p>
+              <p class="descript-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                aut alias illum eligendi laborum iste esse incidunt cumque autem
+                dicta excepturi quia, consequuntur voluptas dolorum quaerat eius
+                porro! Dolorem, corporis.
+              </p>
+            </div>
+            <div class="card-btns">
+              <button class="button button-active btn-watchd">
+                ADD TO WATCHED
+              </button>
+              <button class="button btn-queue">ADD TO QUEUE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+       <div class="starter-container">
+        <h1>Popular films</h1>
+      <ul class="film-list">
+        <li class="film-item">
+          <img src="./images/Rectangle.jpg" alt="" />
+          <h2>Name of the film</h2>
+          <p>description | 2020</p>
+        </li>
+        <li class="film-item">
+          <img src="./images/Rectangle.jpg" alt="" />
+          <h2>Name of the film</h2>
+          <p>description | 2020</p>
+        </li>
+        <li class="film-item">
+          <img src="./images/Rectangle.jpg" alt="" />
+          <h2>Name of the film</h2>
+          <p>description | 2020</p>
+        </li>
+        <li class="film-item">
+          <img src="./images/Rectangle.jpg" alt="" />
+          <h2>Name of the film</h2>
+          <p>description | 2020</p>
+        </li>
+        <li class="film-item">
+          <img src="./images/Rectangle.jpg" alt="" />
+          <h2>Name of the film</h2>
+          <p>description | 2020</p>
+        </li>
+        <li class="film-item">
+          <img src="./images/Rectangle.jpg" alt="" />
+          <h2>Name of the film</h2>
+          <p>description | 2020</p>
+        </li>
+        <li class="film-item">
+          <img src="./images/Rectangle.jpg" alt="" />
+          <h2>Name of the film</h2>
+          <p>description | 2020</p>
+        </li>
+        <li class="film-item">
+          <img src="./images/Rectangle.jpg" alt="" />
+          <h2>Name of the film</h2>
+          <p>description | 2020</p>
+        </li>
+        <li class="film-item">
+          <img src="./images/Rectangle.jpg" alt="" />
+          <h2>Name of the film</h2>
+          <p>description | 2020</p>
+        </li>
+      </ul>
+   </div>
+   <div class="bottom-navigation">
+        <button>&#8592</button>
+      <ul>
+        <li><button class="none">1</button></li>
+        <li><button class="none" >...</button></li>
+        <li><button>5</button></li>
+        <li><button>6</button></li>
+        <li ><button class="active">7</button></li>
+        <li><button>8</button></li>
+        <li><button>9</button></li>
+        <li><button class="none">...</button></li>
+        <li><button class="none">20</button></li>
+      </ul>
+      <button>&#8594</button>
+   </div>
+    </main>
+      <footer class="footer-conteiner">
     <p class="copyright">
       © 2020 | All Rights Reserved | Developed with
       <use></use>
@@ -15,4 +148,5 @@
       <a href="" class="students" link="GoItStudents"></a>
     </p>
   </footer>
+  </body>
 </html>
