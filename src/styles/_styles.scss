@@ -1,5 +1,4 @@
 html {
-  font-size: 10px;
   font-family: 'Roboto', sans-serif;
 }
 :root {
@@ -9,4 +8,17 @@ html {
   --error-color: #ff001b;
   --main-bg-color: #e5e5e5;
   --footer-bg-color: #f7f7f7;
+}
+
+.main__text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.title-color {
+  color: var(--main-color);
+}
+.title__-color {
+  color: var(--decor-color);
 }
