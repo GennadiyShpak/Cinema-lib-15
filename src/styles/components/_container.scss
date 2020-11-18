@@ -1,15 +1,19 @@
 .container {
-  padding: 0 20px;
-  margin: 0 auto;
-  width: 320px;
-
-  @media (min-width: 768px) {
-    padding: 0 76px;
+  margin-left: 0 auto;
+  padding: 0 20px 0 20px;
+  @include for-size(mobile-sm) {
+    max-width: 400px;
+  }
+  @include for-size(mobile) {
+    max-width: 767px;
+  }
+  @include for-size(tablet) {
     width: 768px;
   }
-
-  @media (min-width: 1024px) {
-    padding: 0 72px;
+  @include for-size(desktop) {
     width: 1024px;
+  }
+  @include for-size(desktop-hd) {
+    width: 1680px;
   }
 }
