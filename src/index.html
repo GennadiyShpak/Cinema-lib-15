@@ -11,135 +11,184 @@
       <div class="container">
         <div class="header__block">
           <div class="header__logo">
-            <img src="./images/film.svg" alt="">
-              <span class="header__logo--text">Filmoteka</span>
-            </div>
-            <nav> 
-              <ul class="nav__ul main__text">
-                <li class="nav__ul--item">
-                  <a href="" class="current-page">Home</a> 
-                </li>
-                <li class="nav__ul--item">
-                  <a href="my_library.html">my library</a> 
-                </li>
-              </ul>
-            </nav>
+            <img src="./images/film.svg" alt="" />
+            <span class="header__logo--text">Filmoteka</span>
+          </div>
+          <nav>
+            <ul class="nav__ul main__text">
+              <li class="nav__ul--item">
+                <a href="" class="current-page">Home</a>
+              </li>
+              <li class="nav__ul--item">
+                <a href="my_library.html">my library</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-          <form action="" name="searchFilm" autocomplete="off" class="header__form">
-            <input type="text" placeholder="Поиск фильмов" id="search" class="header__form--input">
-          </form>
-          <p class="header__text--error">Search result not successful. Enter the correct movie name and </p>
+        <form
+          action=""
+          name="searchFilm"
+          autocomplete="off"
+          class="header__form"
+        >
+          <input
+            type="text"
+            placeholder="Поиск фильмов"
+            id="search"
+            class="header__form--input"
+          />
+        </form>
+        <p class="header__text--error">
+          Search result not successful. Enter the correct movie name and
+        </p>
       </div>
     </header>
-  <main>
 
-    <section class="section">
-      <div class="container">
-        <div class="card-wrapper">
-        <section class="container">
-          <h1>Popular films</h1>
-          <ul class="film__list">
+    <main>
+      <section class="container">
+        <h1>Popular films</h1>
+
+        <ul class="film__list">
           <li class="film__item">
-            <img class="film__item_picture" src="./images/Rectangle.jpg" alt="" />
-             <h3 class="film__item_title">Name of the film</h3>
-             <p class="film__item_description">description | 2020</p>
-           </li>
-           <li class="film-item">
-             <img src="./images/Rectangle.jpg" alt="" />
-             <h3 class="film__item_title">Name of the film</h3>
-             <p class="film__item_description">description | 2020</p>
-           </li>
-           <li class="film-item">
-             <img src="./images/Rectangle.jpg" alt="" />
-             <h3 class="film__item_title">Name of the film</h3>
-             <p class="film__item_description">description | 2020</p>
-           </li>
-         </ul>
+            <img
+              class="film__item_picture"
+              src="./images/Rectangle.jpg"
+              alt=""
+            />
+            <h3 class="film__item_title">Name of the film</h3>
+            <p class="film__item_description">description | 2020</p>
+          </li>
+
+          <li class="film-item">
+            <img src="./images/Rectangle.jpg" alt="" />
+            <h3 class="film__item_title">Name of the film</h3>
+            <p class="film__item_description">description | 2020</p>
+          </li>
+
+          <li class="film-item">
+            <img src="./images/Rectangle.jpg" alt="" />
+            <h3 class="film__item_title">Name of the film</h3>
+            <p class="film__item_description">description | 2020</p>
+          </li>
+        </ul>
+
         <div class="pagination-wrapper navigation">
-          <button class="pagination__btn">&#8592</button>
+          <button class="pagination__btn">&#8592;</button>
+
           <ul class="pagination-button__list navigation">
-            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">1</button></li>
-            <li class="page-numbers__item"><button class="not-active-btn pagination__btn" >...</button></li>
-            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">5</button></li>
-            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">6</button></li>
-            <li class="page-numbers__item" ><button class="active pagination__btn">7</button></li>
-            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">8</button></li>
-            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">9</button></li>
-            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">...</button></li>
-            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">20</button></li>
+            <li class="page-numbers__item">
+              <button class="not-active-btn pagination__btn">1</button>
+            </li>
+
+            <li class="page-numbers__item">
+              <button class="not-active-btn pagination__btn">...</button>
+            </li>
+
+            <li class="page-numbers__item">
+              <button class="not-active-btn pagination__btn">5</button>
+            </li>
+
+            <li class="page-numbers__item">
+              <button class="not-active-btn pagination__btn">6</button>
+            </li>
+
+            <li class="page-numbers__item">
+              <button class="active pagination__btn">7</button>
+            </li>
+            <li class="page-numbers__item">
+              <button class="not-active-btn pagination__btn">8</button>
+            </li>
+
+            <li class="page-numbers__item">
+              <button class="not-active-btn pagination__btn">9</button>
+            </li>
+
+            <li class="page-numbers__item">
+              <button class="not-active-btn pagination__btn">...</button>
+            </li>
+
+            <li class="page-numbers__item">
+              <button class="not-active-btn pagination__btn">20</button>
+            </li>
           </ul>
-          <button class="pagination__btn">&#8594</button>
+
+          <button class="pagination__btn">&#8594;</button>
         </div>
       </section>
+    </main>
+
     <div class="modal__backdrop is-hidden">
       <div class="modal__wrapper">
         <div class="card__box">
           <div class="card-img">
             <img src="./imgs/film1.jpg" alt="movie 1" />
           </div>
-          <div>
-            <div class="card-header">
-              <h1 class="card-title">A FISTFUL OF LEAD</h1>
-            </div>
-            <div class="rating">
-              <ul class="rating-title">
-                <li>Vote / Votes</li>
-                <li>Popularity</li>
-                <li>Original Title</li>
-                <li>Genre</li>
-              </ul>
-              <ul class="rating-data">
-                <li>
-                  <span class="first">7.3</span> /
-                  <span class="second">1260</span>
-                </li>
-                <li>100.2</li>
-                <li>A FISTFUL OF LEAD</li>
-                <li>Western</li>
-              </ul>
-            </div>
-            <div class="descript">
-              <p class="descript-title">About</p>
-              <p class="descript-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-                aut alias illum eligendi laborum iste esse incidunt cumque autem
-                dicta excepturi quia, consequuntur voluptas dolorum quaerat eius
-                porro! Dolorem, corporis.
-              </p>
-            </div>
-            <div class="card-btns">
-              <button class="button button-active btn-watchd">
-                ADD TO WATCHED
-              </button>
-              <button class="button btn-queue">ADD TO QUEUE</button>
-            </div>
-          </div>
+        </div>
+
+        <div class="card-header">
+          <h1 class="card-title">A FISTFUL OF LEAD</h1>
+        </div>
+
+        <div class="rating">
+          <ul class="rating-title">
+            <li>Vote / Votes</li>
+            <li>Popularity</li>
+            <li>Original Title</li>
+            <li>Genre</li>
+          </ul>
+          <ul class="rating-data">
+            <li>
+              <span class="first">7.3</span>
+              <span class="second">1260</span>
+            </li>
+            <li>100.2</li>
+            <li>A FISTFUL OF LEAD</li>
+            <li>Western</li>
+          </ul>
+        </div>
+
+        <div class="descript">
+          <p class="descript-title">About</p>
+          <p class="descript-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aut
+            alias illum eligendi laborum iste esse incidunt cumque autem dicta
+            excepturi quia, consequuntur voluptas dolorum quaerat eius porro!
+            Dolorem, corporis.
+          </p>
+        </div>
+
+        <div class="card-btns">
+          <button class="button button-active btn-watchd">
+            ADD TO WATCHED
+          </button>
+          <button class="button btn-queue">ADD TO QUEUE</button>
         </div>
       </div>
     </div>
-          <div class="loader"></div>
-      </section>
-    </main>
- <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <p class="copyright">
-          © 2020 | All Rights Reserved |
-        </p>
-        <p class="copyright-bottom">
-          Developed with
-          <svg  width="40px" height="40px" aria-label="Heart" ></svg>
-          <use
-            class="icon-heart"
-            href = "../src/images/sprite.svg#icon-heart"
-          ></use>
-        </svg>
-          by
-          <a href="https://goit.ua/" class="students"> GoItStudents</a>
-        </p>
-      </div>
 
-    </div>
-  </footer>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="copyright">© 2020 | All Rights Reserved |</p>
+          <p class="copyright-bottom">
+            Developed with
+            <svg
+              width="14"
+              height="13"
+              viewbox="0 0 14 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 12.88L6.02 11.9C2.38 8.68 0 6.51 0 3.85C0 1.68 1.68 0 3.85 0C5.04 0 6.23 0.56 7 1.47C7.77 0.56 8.96 0 10.15 0C12.32 0 14 1.68 14 3.85C14 6.51 11.62 8.68 7.98 11.9L7 12.88Z"
+                fill="#FF6B08"
+              />
+            </svg>
+            by
+            <a href="https://goit.ua/" class="students"> GoItStudents</a>
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,26 +1,26 @@
-.footer .container{
-background-color: var(--footer-bg-color);
-display: block
+.footer .container {
+  background-color: var(--footer-bg-color);
+  display: block;
 }
 
-.copyright-bottom{
-    display: flex;
+.copyright-bottom {
+  display: flex;
 }
 
 .footer-content {
-font-style: inherit;
+  font-style: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
-  color: #545454;  
+  color: #545454;
 
   padding-top: 30px;
   padding-bottom: 28px;
   text-align: center;
- 
-  @media (max-width: 767px){
+
+  @media (max-width: 767px) {
     padding-top: 28px;
     padding-bottom: 29px;
     display: flex;
@@ -29,7 +29,7 @@ font-style: inherit;
   }
 
   @media screen and (min-width: 768px) {
-    display: flex;    
+    display: flex;
     align-content: center;
     justify-content: center;
   }
@@ -40,7 +40,12 @@ font-style: inherit;
     align-items: center;
   }
 }
- .students{
- text-decoration: underline;
- color: #545454;
+.students {
+  text-decoration: underline;
+  color: #545454;
+}
+
+.svg_icon {
+  width: 40px;
+  height: 40px;
 }
