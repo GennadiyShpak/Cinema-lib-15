@@ -1,0 +1,51 @@
+.footer .container {
+  background-color: var(--footer-bg-color);
+  display: block;
+}
+
+.copyright-bottom {
+  display: flex;
+}
+
+.footer-content {
+  font-style: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #545454;
+
+  padding-top: 30px;
+  padding-bottom: 28px;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    padding-top: 28px;
+    padding-bottom: 29px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1024 px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.students {
+  text-decoration: underline;
+  color: #545454;
+}
+
+.svg_icon {
+  width: 40px;
+  height: 40px;
+}

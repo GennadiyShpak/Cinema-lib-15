@@ -1,16 +1,14 @@
+// HELPERS
+@import 'helpers/mixin';
+
 @import 'base';
 @import 'fonts';
 @import 'styles';
 
-// HELPERS
-@import 'helpers/mixin.scss';
-
 // COMPONENTS
 @import 'components/container';
-// @import 'components/footer';
-// @import 'components/header';
-// @import 'components/logo';
-// @import 'components/menu';
-// @import 'components/navigation';
-@import 'components/card';
+@import 'components/header';
 @import 'components/section';
+@import 'components/footer';
+@import 'components/section';
+@import 'components/modal';
