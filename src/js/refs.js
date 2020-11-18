@@ -1,3 +1,5 @@
-const refs = {};
+const refs = {
+    filmGalery: document.querySelector('.film__list')
+};
 
-export { refs };
+export default refs;

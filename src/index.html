@@ -8,7 +8,7 @@
   </head>
   <body>
 
-   <header>
+   <!-- <header>
       <div>
         <span>Filmoteka</span>
       </div>
@@ -26,11 +26,11 @@
         <input type="text" placeholder="my library" id="search">
       </form>
       <p class="search_error">Search result not successful. Enter the correct movie name and </p>
-    </header>
+    </header> -->
 
   <main>
 
-    <section class="section">
+    <!-- <section class="section">
       <div class="container">
         <div class="card-wrapper">
           <div class="card-img">
@@ -75,26 +75,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
         <section class="container">
           <h1>Popular films</h1>
           <ul class="film__list">
-          <li class="film__item">
-            <img class="film__item_picture" src="./images/Rectangle.jpg" alt="" />
-             <h3 class="film__item_title">Name of the film</h3>
-             <p class="film__item_description">description | 2020</p>
-           </li>
-           <li class="film-item">
-             <img src="./images/Rectangle.jpg" alt="" />
-             <h3 class="film__item_title">Name of the film</h3>
-             <p class="film__item_description">description | 2020</p>
-           </li>
-           <li class="film-item">
-             <img src="./images/Rectangle.jpg" alt="" />
-             <h3 class="film__item_title">Name of the film</h3>
-             <p class="film__item_description">description | 2020</p>
-           </li>
-         </ul>
+          </ul>
         <div class="pagination-wrapper navigation">
           <button class="pagination__btn">&#8592</button>
           <ul class="pagination-button__list navigation">
@@ -102,7 +87,7 @@
             <li class="page-numbers__item"><button class="not-active-btn pagination__btn" >...</button></li>
             <li class="page-numbers__item"><button class="not-active-btn pagination__btn">5</button></li>
             <li class="page-numbers__item"><button class="not-active-btn pagination__btn">6</button></li>
-            <li class="page-numbers__item" ><button class="active pagination__btn">7</button></li>
+            <li class="page-numbers__item" ><button class="active test  pagination__btn">7</button></li>
             <li class="page-numbers__item"><button class="not-active-btn pagination__btn">8</button></li>
             <li class="page-numbers__item"><button class="not-active-btn pagination__btn">9</button></li>
             <li class="page-numbers__item"><button class="not-active-btn pagination__btn">...</button></li>
@@ -113,13 +98,22 @@
       </section>
     </main>
 
-    <footer class="footer-conteiner container">
-      <p class="copyright">
-      © 2020 | All Rights Reserved | Developed with
-      <use></use>
-      by
-      <a href="" class="students" link="GoItStudents"></a>
-      </p>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="copyright">
+            © 2020 | All Rights Reserved |
+          </p>
+          <p class="copyright-bottom">
+            Developed with
+            <use
+              class="icon-heart"
+            ></use>
+            by
+            <a href="https://goit.ua/" class="students"> GoItStudents</a>
+          </p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
