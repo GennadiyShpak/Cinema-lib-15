@@ -6,75 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
   </head>
+
+
   <body>
-
-   <header>
-      <div>
-        <span>Filmoteka</span>
-      </div>
-      <nav>
-        <ul>
-          <li>
-            Home
-          </li>
-          <li>
-            my library
-          </li>
-        </ul>
-      </nav>
-      <form action="" name="searchFilm">
-        <input type="text" placeholder="my library" id="search">
-      </form>
-      <p class="search_error">Search result not successful. Enter the correct movie name and </p>
-    </header>
-
-  <main>
-
-    <section class="section">
-      <div class="container">
-        <div class="card-wrapper">
-          <div class="card-img">
-            <img src="./imgs/film1.jpg" alt="movie 1" />
-          </div>
-          <div>
-            <div class="card-header">
-              <h1 class="card-title">A FISTFUL OF LEAD</h1>
-            </div>
-            <div class="rating">
-              <ul class="rating-title">
-                <li>Vote / Votes</li>
-                <li>Popularity</li>
-                <li>Original Title</li>
-                <li>Genre</li>
-              </ul>
-              <ul class="rating-data">
-                <li>
-                  <span class="first">7.3</span> /
-                  <span class="second">1260</span>
-                </li>
-                <li>100.2</li>
-                <li>A FISTFUL OF LEAD</li>
-                <li>Western</li>
-              </ul>
-            </div>
-            <div class="descript">
-              <p class="descript-title">About</p>
-              <p class="descript-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-                aut alias illum eligendi laborum iste esse incidunt cumque autem
-                dicta excepturi quia, consequuntur voluptas dolorum quaerat eius
-                porro! Dolorem, corporis.
-              </p>
-            </div>
-            <div class="card-btns">
-              <button class="button button-active btn-watchd">
-                ADD TO WATCHED
-              </button>
-              <button class="button btn-queue">ADD TO QUEUE</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
         <section class="container">
           <h1>Popular films</h1>
@@ -113,14 +47,29 @@
           <div class="loader"></div>
       </section>
     </main>
+ <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="copyright">
+          © 2020 | All Rights Reserved |
+        </p>
+        <p class="copyright-bottom">
+          Developed with
+          <svg  width="40px" height="40px" aria-label="Heart" ></svg>
+          <use
+            class="icon-heart"
+            href = "../src/images/sprite.svg#icon-heart"
+          ></use>
+        </svg>
+          by
+          <a href="https://goit.ua/" class="students"> GoItStudents</a>
+        </p>
+      </div>
 
-    <footer class="footer-conteiner container">
-      <p class="copyright">
-      © 2020 | All Rights Reserved | Developed with
-      <use></use>
-      by
-      <a href="" class="students" link="GoItStudents"></a>
-      </p>
-    </footer>
+    </div>
+  </footer>
+
   </body>
+
+
 </html>
