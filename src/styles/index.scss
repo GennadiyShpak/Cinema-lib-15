@@ -9,15 +9,16 @@
 @import 'helpers/mixin.scss';
 // @import 'helpers/map';
 
-@import 'helpers/mixin.scss';
-
-
 // COMPONENTS
 @import 'components/container';
+// @import 'components/footer';
+ @import 'components/header';
 @import 'components/footer';
 // @import 'components/header';
 // @import 'components/logo';
 // @import 'components/menu';
 // @import 'components/navigation';
+@import 'components/modal';
+@import 'components/section';
 // @import 'components/card';
-// @import 'components/section';
+
