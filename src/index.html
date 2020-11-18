@@ -36,6 +36,44 @@
     <section class="section">
       <div class="container">
         <div class="card-wrapper">
+        <section class="container">
+          <h1>Popular films</h1>
+          <ul class="film__list">
+          <li class="film__item">
+            <img class="film__item_picture" src="./images/Rectangle.jpg" alt="" />
+             <h3 class="film__item_title">Name of the film</h3>
+             <p class="film__item_description">description | 2020</p>
+           </li>
+           <li class="film-item">
+             <img src="./images/Rectangle.jpg" alt="" />
+             <h3 class="film__item_title">Name of the film</h3>
+             <p class="film__item_description">description | 2020</p>
+           </li>
+           <li class="film-item">
+             <img src="./images/Rectangle.jpg" alt="" />
+             <h3 class="film__item_title">Name of the film</h3>
+             <p class="film__item_description">description | 2020</p>
+           </li>
+         </ul>
+        <div class="pagination-wrapper navigation">
+          <button class="pagination__btn">&#8592</button>
+          <ul class="pagination-button__list navigation">
+            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">1</button></li>
+            <li class="page-numbers__item"><button class="not-active-btn pagination__btn" >...</button></li>
+            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">5</button></li>
+            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">6</button></li>
+            <li class="page-numbers__item" ><button class="active pagination__btn">7</button></li>
+            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">8</button></li>
+            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">9</button></li>
+            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">...</button></li>
+            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">20</button></li>
+          </ul>
+          <button class="pagination__btn">&#8594</button>
+        </div>
+      </section>
+    <div class="modal__backdrop is-hidden">
+      <div class="modal__wrapper">
+        <div class="card__box">
           <div class="card-img">
             <img src="./imgs/film1.jpg" alt="movie 1" />
           </div>
@@ -78,51 +116,30 @@
           </div>
         </div>
       </div>
-    </section>
-        <section class="container">
-          <h1>Popular films</h1>
-          <ul class="film__list">
-          <li class="film__item">
-            <img class="film__item_picture" src="./images/Rectangle.jpg" alt="" />
-             <h3 class="film__item_title">Name of the film</h3>
-             <p class="film__item_description">description | 2020</p>
-           </li>
-           <li class="film-item">
-             <img src="./images/Rectangle.jpg" alt="" />
-             <h3 class="film__item_title">Name of the film</h3>
-             <p class="film__item_description">description | 2020</p>
-           </li>
-           <li class="film-item">
-             <img src="./images/Rectangle.jpg" alt="" />
-             <h3 class="film__item_title">Name of the film</h3>
-             <p class="film__item_description">description | 2020</p>
-           </li>
-         </ul>
-        <div class="pagination-wrapper navigation">
-          <button class="pagination__btn">&#8592</button>
-          <ul class="pagination-button__list navigation">
-            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">1</button></li>
-            <li class="page-numbers__item"><button class="not-active-btn pagination__btn" >...</button></li>
-            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">5</button></li>
-            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">6</button></li>
-            <li class="page-numbers__item" ><button class="active pagination__btn">7</button></li>
-            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">8</button></li>
-            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">9</button></li>
-            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">...</button></li>
-            <li class="page-numbers__item"><button class="not-active-btn pagination__btn">20</button></li>
-          </ul>
-          <button class="pagination__btn">&#8594</button>
-        </div>
+    </div>
+          <div class="loader"></div>
       </section>
     </main>
+ <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="copyright">
+          © 2020 | All Rights Reserved |
+        </p>
+        <p class="copyright-bottom">
+          Developed with
+          <svg  width="40px" height="40px" aria-label="Heart" ></svg>
+          <use
+            class="icon-heart"
+            href = "../src/images/sprite.svg#icon-heart"
+          ></use>
+        </svg>
+          by
+          <a href="https://goit.ua/" class="students"> GoItStudents</a>
+        </p>
+      </div>
 
-    <footer class="footer-conteiner container">
-      <p class="copyright">
-      © 2020 | All Rights Reserved | Developed with
-      <use></use>
-      by
-      <a href="" class="students" link="GoItStudents"></a>
-      </p>
-    </footer>
+    </div>
+  </footer>
   </body>
 </html>
