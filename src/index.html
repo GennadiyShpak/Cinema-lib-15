@@ -7,30 +7,6 @@
     <title>Document</title>
   </head>
   <body>
-
-   <header>
-      <div>
-        <span>Filmoteka</span>
-      </div>
-      <nav>
-        <ul>
-          <li>
-            Home
-          </li>
-          <li>
-            my library
-          </li>
-        </ul>
-      </nav>
-      <form action="" name="searchFilm">
-        <input type="text" placeholder="my library" id="search">
-      </form>
-      <p class="search_error">Search result not successful. Enter the correct movie name and </p>
-    </header>
-
-  <main>
-
-
         <section class="container">
           <h1>Popular films</h1>
           <ul class="film__list">
@@ -66,7 +42,6 @@
           <button class="pagination__btn">&#8594</button>
         </div>
       </section>
-    </main>
     <div class="modal__backdrop is-hidden">
       <div class="modal__wrapper">
         <div class="card__box">
@@ -113,13 +88,31 @@
         </div>
       </div>
     </div>
-    <footer class="footer-conteiner container">
-      <p class="copyright">
-      © 2020 | All Rights Reserved | Developed with
-      <use></use>
-      by
-      <a href="" class="students" link="GoItStudents"></a>
-      </p>
-    </footer>
+          <div class="loader"></div>
+      </section>
+    </main>
+ <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="copyright">
+          © 2020 | All Rights Reserved |
+        </p>
+        <p class="copyright-bottom">
+          Developed with
+          <svg  width="40px" height="40px" aria-label="Heart" ></svg>
+          <use
+            class="icon-heart"
+            href = "../src/images/sprite.svg#icon-heart"
+          ></use>
+        </svg>
+          by
+          <a href="https://goit.ua/" class="students"> GoItStudents</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
   </body>
+
+
 </html>
