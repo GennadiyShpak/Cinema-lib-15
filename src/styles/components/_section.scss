@@ -1,0 +1,51 @@
+.film__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.film__item {
+  margin-bottom: 30px;
+
+  &_title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--main-color);
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  &_description {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--decor-color);
+    margin: 0;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.page-numbers__item {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.pagination__btn {
+  width: 40px;
+  height: 40px;
+  background-color: var(--main-bg-color);
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.active {
+  background-color: var(--decor-color);
+  color: white;
+}

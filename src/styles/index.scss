@@ -3,10 +3,7 @@
 @import 'styles';
 
 // HELPERS
-// @import 'helpers/variables';
-// @import 'helpers/placeholder';
-// @import 'helpers/mixin.scss';
-// @import 'helpers/map';
+@import 'helpers/mixin.scss';
 
 // COMPONENTS
 @import 'components/container';
@@ -15,4 +12,5 @@
 // @import 'components/logo';
 // @import 'components/menu';
 // @import 'components/navigation';
-// @import 'components/section';
+@import 'components/card';
+@import 'components/section';
