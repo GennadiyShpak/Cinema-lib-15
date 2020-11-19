@@ -1,7 +1,7 @@
 {{#each this}}
-<li class="film__item">
+<li class="film__item" data-id={{id}}>
     <img class="film__item_picture" width="210" src="https://image.tmdb.org/t/p/w220_and_h330_face{{backdrop_path}}"
-        alt="{{this.title}}" />
+        alt="{{title}}" />
     <h3 class="film__item_title">{{title}}</h3>
     <p class="film__item_description"><span class="film__item--genre"></span>{{genre}} |{{release_date}}</p>
 </li>
