@@ -5,19 +5,34 @@ const BASE_URL = 'https://api.themoviedb.org/3/';
 const urlParms = ['trending/movie/week', 'search/movie']
 
 export default class MovieService {
-    constructor() {
+    constructor(murkupUpdate) {
         this.page = 1;
         this.searchQuery = '';
+        this.murkupUpdate=murkupUpdate;
     }
 
     async fetchMovies () {
-        const url = `${BASE_URL}${urlParms[0]}?api_key=${API_KEY}&page=${this.page}`
-        return this.responceHandler(url)
+        const url = `${BASE_URL}${urlParms[0]}?api_key=${API_KEY}&page=${this.page}`;
+        return this.responceHandler(url);
     }
 
     async searchMovie () {
-        const url = `${BASE_URL}${urlParms[1]}?api_key=${API_KEY}&query=${this.searchQuery}`
-        return this.responceHandler(url)
+        const url = `${BASE_URL}${urlParms[1]}?api_key=${API_KEY}&query=${this.searchQuery}`;
+        const filmSearchObject=await this.responceHandler(url);
+        filmSearchObject.results=filmSearchObject.results.map(film=>{
+            return {release_date: film.release_date?film.release_date.split('-')[0]:'',
+                    id: film.id,
+                    title: film.title,
+                    backdrop_path: film.backdrop_path,
+            };
+        });
+        return filmSearchObject;
+    }
+
+    async getGenre(movieID){
+        const url=`${BASE_URL}movie/${movieID}?api_key=${API_KEY}&language=en-US`;
+        const filmObject = await this.responceHandler(url);
+        return await filmObject.genres.map(element => element.name);
     }
 
     async responceHandler (url) {
