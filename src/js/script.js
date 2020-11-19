@@ -9,6 +9,5 @@ import { Observer } from './intersectionObserver';
 //Modal window handler.
 require('./handlerModal');
 
-document.addEventListener('click', onCloseModal);
-window.addEventListener('keydown', onCloseModal);
+
 
