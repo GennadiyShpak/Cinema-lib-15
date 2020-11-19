@@ -1,5 +1,5 @@
 {{#each this}}
-<li class="film__item">
+<li data-id="{{id}}" class="film__item">
     <img class="film__item_picture" width="210" src="https://image.tmdb.org/t/p/w220_and_h330_face{{backdrop_path}}"
         alt="{{this.title}}" />
     <h3 class="film__item_title">{{this.title}}</h3>
