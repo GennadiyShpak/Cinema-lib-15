@@ -53,6 +53,14 @@
   @media screen and(min-width:768px) {
     margin-right: 30px;
   }
+  img {
+    @media screen and(min-width:768px) {
+      width: 300px;
+    }
+    @media screen and(min-width:1024px) {
+      width: 360px;
+    }
+  }
 }
 .card-header {
   margin-bottom: 20px;
@@ -124,8 +132,7 @@
 .btn-watchd {
   margin-right: 10px;
 }
-.btn-queue {
-}
+
 //--------------
 .button {
   width: 133px;
