@@ -11,3 +11,5 @@ import { Observer } from './intersectionObserver';
 
 document.addEventListener('click', onCloseModal);
 window.addEventListener('keydown', onCloseModal);
+
+
