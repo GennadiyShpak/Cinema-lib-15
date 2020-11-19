@@ -4,13 +4,13 @@ import refs from "../js/refs";
 
 
 
-const movieMarkup = new MovieService()
-
+const mainPageMarkupHandler = new MovieService();
 
 export default async function onLoadPage() {
-    const films = await movieMarkup.fetchMovies()
+    const films = await mainPageMarkupHandler.fetchMovies()
     mainPageHandler(films.results);
-  }
+}
+
   async function mainPageHandler(films) {
       const markup = handlebars(films);
       refs.filmGalery.innerHTML = markup;

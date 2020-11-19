@@ -1,7 +1,8 @@
 // import { data } from "autoprefixer";
 
 const API_KEY = 'bb3f2a9bd6a374d8a5257ae7f0ad6ee7';
-const BASE_URL = 'https://api.themoviedb.org/3/'
+const BASE_URL = 'https://api.themoviedb.org/3/';
+const urlParms = ['trending/movie/week', 'search/movie']
 
 export default class MovieService {
     constructor() {
@@ -10,14 +11,24 @@ export default class MovieService {
     }
 
     async fetchMovies () {
-    try{
-      const responce = await fetch(`${BASE_URL}trending/movie/week?api_key=${API_KEY}&page=${this.page}`)
-      
-        if (responce.ok) {
-            const data = await responce.json();
-            return data;
-        }
-        throw new Error (data.statusText);
+        const url = `${BASE_URL}${urlParms[0]}?api_key=${API_KEY}&page=${this.page}`
+        return this.responceHandler(url)
+    }
+
+    async searchMovie () {
+        const url = `${BASE_URL}${urlParms[1]}?api_key=${API_KEY}&query=${this.searchQuery}`
+        return this.responceHandler(url)
+    }
+
+    async responceHandler (url) {
+        try{
+            const responce = await fetch(url)
+            
+              if (responce.ok) {
+                  const data = await responce.json();
+                  return data;
+              }
+              throw new Error (data.statusText);
         }  
         catch {
             error=>colsole.log(error)
