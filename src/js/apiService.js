@@ -2,14 +2,13 @@
 
 const API_KEY = 'bb3f2a9bd6a374d8a5257ae7f0ad6ee7';
 const BASE_URL = 'https://api.themoviedb.org/3/';
-const urlParms = ['trending/movie/week', 'search/movie']
+const urlParms = ['trending/movie/week', 'search/movie'];
 
 export default class MovieService {
-    constructor(murkupUpdate) {
-        this.page = 1;
-        this.searchQuery = '';
-        this.murkupUpdate=murkupUpdate;
-    }
+constructor() {
+  this.page = 1;
+  this.searchQuery = '';
+}
 
     async fetchMovies () {
         const url = `${BASE_URL}${urlParms[0]}?api_key=${API_KEY}&page=${this.page}`;
@@ -27,6 +26,12 @@ export default class MovieService {
             };
         });
         return filmSearchObject;
+    }
+
+    async fetchMovieById(id) {
+      //api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
+      const url = `${BASE_URL}movie/${id}?api_key=${API_KEY}`;
+      return this.responceHandler(url);
     }
 
     async getGenre(movieID){
