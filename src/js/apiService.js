@@ -1,50 +1,42 @@
-import axios from "axios";
-const API_KEY = "";
-const BASE_URL = "";
+// import { data } from "autoprefixer";
 
-export default class ImgApiService {
-  constructor() {
-    this.searchQuery = "";
-    this.page = 1;
-    this.per_page = 12;
-  }
+const API_KEY = 'bb3f2a9bd6a374d8a5257ae7f0ad6ee7';
+const BASE_URL = 'https://api.themoviedb.org/3/'
 
-  async NAME_FUNCTION() {
-    const searchParams = new URLSearchParams({
-      image_type: "",
-      orientation: "",
-      q: this.searchQuery,
-      page: this.page,
-      per_page: this.per_page,
-      key: API_KEY,
-    });
-
-    try {
-      axios.defaults.baseURL = BASE_URL;
-      const { data } = await axios.get(`${searchParams}`);
-      this.incrementPage();
-
-      return data.hits;
-    } catch (error) {
-      console.log("error", { error });
-
-      return [];
+export default class MovieService {
+    constructor() {
+        this.page = 1;
+        this.searchQuery = '';
     }
-  }
 
-  get query() {
-    return this.searchQuery;
-  }
+    async fetchMovies () {
+    try{
+      const responce = await fetch(`${BASE_URL}trending/movie/week?api_key=${API_KEY}&page=${this.page}`)
+      
+        if (responce.ok) {
+            const data = await responce.json();
+            return data;
+        }
+        throw new Error (data.statusText);
+        }  
+        catch {
+            error=>colsole.log(error)
+        }
+    }
 
-  set query(newQuery) {
-    this.searchQuery = newQuery;
-  }
+    get query () {
+        return this.searchQuery;
+    }
 
-  incrementPage() {
-    this.page += 1;
-  }
+    set query (newSearchQuery) {
+        this.searchQuery=newSearchQuery;
+    }
 
-  resetPage() {
-    this.page = 1;
-  }
-}
+    incrementPage () {
+        this.page += 1;
+    }
+
+    resetInput () {
+        this.page =1;
+    }
+} 
