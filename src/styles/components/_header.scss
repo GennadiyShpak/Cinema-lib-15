@@ -28,6 +28,9 @@
     color: var(--header-collor);
     border-color: var(--header-collor);
   }
+  & .button-active {
+    background-color: var(--decor-color);
+  }
 
   &__block {
     display: flex;
@@ -199,7 +202,8 @@
 .loader {
   position: absolute;
   top: 35px;
-  left: 230px;
+  left: -30px;
+
   border: 4px solid #f3f3f3; /* Light grey */
   border-top: 4px solid #3498db; /* Blue */
   border-radius: 50%;
@@ -208,6 +212,15 @@
   animation: spin 2s linear infinite;
 
   display: none;
+
+  @media screen and (min-width: 768px) {
+    top: 35px;
+    left: 165px;
+  }
+  @media screen and (min-width: 1024px) {
+    top: 35px;
+    left: 230px;
+  }
 }
 .loader.active {
   background-color: transparent;

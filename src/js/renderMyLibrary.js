@@ -1,42 +1,46 @@
 import templates from '../templates/main-page.hbs';
-import MovieService from '../js/apiService';
-import refs from './refs';
 
-// const watched = localStorage.getItem('watched');
-const getTheFilm = new MovieService();
+export default function makeLibrayWatched() {
+  const queueBtn = document.querySelector('.btn-queue');
+  const watchedBtn = document.querySelector('.btn-watchd');
 
-let array = [
-  { name: 'adwda', id: '613504' },
-  { name: 'adwasda', id: '340102' },
-  { name: 'adwada', id: '622855' },
-];
+  removeClass(queueBtn);
+  addClass(watchedBtn);
 
-let newArr = [];
+  queueBtn.addEventListener('click', makeLibraryQueue);
 
-// const parsedWatched = JSON.parse(wathced);
+  const watched = JSON.parse(localStorage.getItem('watched'));
+  makeMarkup(watched);
+}
 
-export default async function makeMarkup() {
-  const film = await getTheFilm.fetchMovieById(613504);
-  const film1 = await getTheFilm.fetchMovieById(340102);
-  const film2 = await getTheFilm.fetchMovieById(622855);
+function makeLibraryQueue() {
+  const queueBtn = document.querySelector('.btn-queue');
+  const watchedBtn = document.querySelector('.btn-watchd');
 
-  array.forEach(async el => {
-    let film = await getTheFilm.fetchMovieById(el.id);
-    newArr.push(film);
-  });
+  removeClass(watchedBtn);
+  addClass(queueBtn);
 
-  console.log(newArr);
+  watchedBtn.addEventListener('click', makeLibrayWatched);
 
-  let markup = templates([
-    film,
-    film1,
-    film2,
-    film,
-    film1,
-    film2,
-    film,
-    film1,
-    film2,
-  ]);
-  refs.watchedGallery.innerHTML = markup;
+  const queue = JSON.parse(localStorage.getItem('queue'));
+  makeMarkup(queue);
+}
+
+function makeMarkup(data) {
+  const watchedList = document.querySelector('.film__watched');
+
+  if (data.length === 0) {
+    watchedList.innerHTML =
+      '<p class="glow">List is empty. Add some films </p>';
+    return;
+  }
+
+  watchedList.innerHTML = templates(data);
+}
+
+function removeClass(button) {
+  button.classList.remove('button-active');
+}
+function addClass(button) {
+  button.classList.add('button-active');
 }
