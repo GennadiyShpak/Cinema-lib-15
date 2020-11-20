@@ -1,33 +1,24 @@
 <div class="container">
-        <div class="header__block">
-          <div class="header__logo">
-            <img src="../images/film.svg" alt="" />
-            <span class="header__logo--text">Filmoteka</span>
-          </div>
-          <nav>
-            <ul class="nav__ul main__text">
-              <li class="nav__ul--item current-page">Home</li>
-              <li class="nav__ul--item">my library</li>
-            </ul>
-          </nav>
-        </div>
-        <form
-          action=""
-          name="searchFilm"
-          autocomplete="off"
-          class="header__form"
-        >
-          <input
-            type="text"
-            placeholder="Поиск фильмов"
-            id="search"
-            class="header__form--input"
-          />
-          <button class="header-btn search-btn-js pagination__btn">
-            <img src="#" alt="" />
-          </button>
-        </form>
-        <p class="header__text--error">
-          Search result not successful. Enter the correct movie name and
-        </p>
-      </div>
+  <div class="header__block">
+    <div class="header__logo">
+      <img src="../images/film.svg" alt="" />
+      <span class="header__logo--text">Filmoteka</span>
+    </div>
+    <nav>
+      <ul class="nav__ul main__text">
+        <li class="nav__ul--item current-page">Home</li>
+        <li class="nav__ul--item">my library</li>
+      </ul>
+    </nav>
+  </div>
+  <form action="" name="searchFilm" autocomplete="off" class="header__form">
+    <div class="loader"></div>
+    <input type="text" placeholder="Поиск фильмов" id="search" class="header__form--input" />
+    <button class="header-btn search-btn-js pagination__btn">
+      <img src="#" alt="" />
+    </button>
+  </form>
+  <p class="header__text--error">
+    Search result not successful. Enter the correct movie name and
+  </p>
+</div>

@@ -7,7 +7,8 @@ const searchServices = new MovieService();
 
 export default async function onSearch(e) {
   e.preventDefault();
-  refs.loader.classList.add('active');
+  const loader = document.querySelector('.loader');
+  loader.classList.add('active');
   refs.filmGalery.innerHTML = '';
   searchServices.query = refs.searchInput.value;
   if (searchServices.query === '') {
@@ -21,7 +22,7 @@ export default async function onSearch(e) {
     }
     await renderGalleryFilms(films.results);
     randerGenreFilm();
-    refs.loader.classList.remove('active');
+    loader.classList.remove('active');
   } catch (err) {
     console.log('onSearch -> err', err);
   }
