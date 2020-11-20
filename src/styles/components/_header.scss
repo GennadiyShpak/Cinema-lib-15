@@ -4,11 +4,11 @@
   background-size: cover;
 }
 
- .main__background--mylib {
-   background-image: url('../images/header_lib_bg.jpg');
-   background-position: center;
-   background-size: cover;
- }
+.main__background--mylib {
+  background-image: url('../images/header_lib_bg.jpg');
+  background-position: center;
+  background-size: cover;
+}
 
 .header {
   padding-top: 46px;
@@ -76,7 +76,7 @@
   display: flex;
   align-items: center;
 
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 
@@ -154,7 +154,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    &:hover{
+    &:hover {
       cursor: pointer;
     }
   }
@@ -210,6 +210,7 @@
   display: none;
 }
 .loader.active {
+  background-color: transparent;
   display: block;
 }
 
