@@ -6,8 +6,10 @@ import refs from './js/refs';
 import './js/renderMyLibrary';
 import makeMarkup from './js/renderMyLibrary';
 
-import onSearch from './js/renderSearchFilm';
-
 onLoadPage();
+<<<<<<< HEAD
 makeMarkup();
 refs.searchForm.addEventListener('submit', onSearch);
+=======
+
+>>>>>>> 4523be5a25461dcebdcfc7f98803a766bca1f6d2

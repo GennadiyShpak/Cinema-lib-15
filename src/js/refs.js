@@ -7,6 +7,8 @@ const refs = {
   searchForm: document.querySelector('.header__form'),
   errorMassage: document.querySelector('.header__text--error'),
   loader: document.querySelector('.loader'),
+  header: document.querySelector('header'),
+  body: document.querySelector('body'),
 };
 
 export default refs;
