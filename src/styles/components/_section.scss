@@ -1,5 +1,6 @@
 
 .movie__container{
+  padding-top: 25px;
   padding-bottom: 40px;
 
   @include for-size(tablet) {
@@ -9,7 +10,6 @@
 }
 .section-title {
   font-size: 30px;
-  margin-bottom: 25px;
   text-align: left;
 
   @media (min-width: 768px) {
