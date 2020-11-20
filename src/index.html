@@ -7,94 +7,15 @@
     <title>Document</title>
   </head>
   <body>
-    <header class="header main__background">
-      <div class="container">
-        <div class="header__block">
-          <div class="header__logo">
-            <img src="./images/film.svg" alt="" />
-            <span class="header__logo--text">Filmoteka</span>
-          </div>
-          <nav>
-            <ul class="nav__ul main__text">
-              <li class="nav__ul--item">
-                <a href="" class="current-page">Home</a>
-              </li>
-              <li class="nav__ul--item">
-                <a href="my_library.html">my library</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <form
-          action=""
-          name="searchFilm"
-          autocomplete="off"
-          class="header__form"
-        >
-          <input
-            type="text"
-            placeholder="Поиск фильмов"
-            id="search"
-            class="header__form--input"
-          />
-          <button class="header-btn search-btn-js pagination__btn">
-            <img src="#" alt="" />
-          </button>
-        </form>
-        <p class="header__text--error">
-          Search result not successful. Enter the correct movie name and
-        </p>
-      </div>
+    <header class="header">
+    
     </header>
 
     <main>
       <section class="container">
         <h1>Popular films</h1>
 
-        <ul class="film__list"></ul>
-
-        <!-- <div class="pagination-wrapper navigation">
-          <button class="pagination__btn">&#8592;</button>
-
-          <ul class="pagination-button__list navigation">
-            <li class="page-numbers__item">
-              <button class="not-active-btn pagination__btn">1</button>
-            </li>
-
-            <li class="page-numbers__item">
-              <button class="not-active-btn pagination__btn">...</button>
-            </li>
-
-            <li class="page-numbers__item">
-              <button class="not-active-btn pagination__btn">5</button>
-            </li>
-
-            <li class="page-numbers__item">
-              <button class="not-active-btn pagination__btn">6</button>
-            </li>
-
-            <li class="page-numbers__item">
-              <button class="active pagination__btn">7</button>
-            </li>
-            <li class="page-numbers__item">
-              <button class="not-active-btn pagination__btn">8</button>
-            </li>
-
-            <li class="page-numbers__item">
-              <button class="not-active-btn pagination__btn">9</button>
-            </li>
-
-            <li class="page-numbers__item">
-              <button class="not-active-btn pagination__btn">...</button>
-            </li>
-
-            <li class="page-numbers__item">
-              <button class="not-active-btn pagination__btn">20</button>
-            </li>
-          </ul>
-          
-          <button class="pagination__btn">&#8594;</button>
-        </div> -->
+        <ul class="film__list"></ul> 
         <div id="pagination" class="tui-pagination"></div>
       </section>
     </main>
@@ -103,11 +24,11 @@
       <div class="modal__wrapper">
         <div class="card__box">
           <div class="card-img">
-            <img class="" src="./imgs/film1.jpg" width="280" alt="movie 1" />
+            <img class="" src="#" width="280" alt="movie 1" />
           </div>
           <div>
             <div class="card-header">
-              <h1 class="card-title">A FISTFUL OF LEAD</h1>
+              <h1 class="card-title">TITLE</h1>
             </div>
             <div class="rating">
               <ul class="rating-title">
@@ -118,28 +39,25 @@
               </ul>
               <ul class="rating-data">
                 <li>
-                  <span class="first">7.3</span> /
-                  <span class="second">1260</span>
+                  <span class="first">1</span> /
+                  <span class="second">1</span>
                 </li>
-                <li>100.2</li>
-                <li>A FISTFUL OF LEAD</li>
-                <li>Western</li>
+                <li>1</li>
+                <li>Title</li>
+                <li>Genre</li>
               </ul>
             </div>
             <div class="descript">
               <p class="descript-title">About</p>
-              <p class="descript-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-                aut alias illum eligendi laborum iste esse incidunt cumque autem
-                dicta excepturi quia, consequuntur voluptas dolorum quaerat eius
-                porro! Dolorem, corporis.
-              </p>
+              <p class="descript-text">Description</p>
             </div>
             <div class="card-btns">
-              <button class="button button-active btn-watchd">
+              <button data-id="watched" class="button btn-watched">
                 ADD TO WATCHED
               </button>
-              <button class="button btn-queue">ADD TO QUEUE</button>
+              <button data-id="queue" class="button btn-queue">
+                ADD TO QUEUE
+              </button>
             </div>
           </div>
         </div>
