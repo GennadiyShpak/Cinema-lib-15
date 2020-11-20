@@ -6,8 +6,6 @@
 .footer .container {
   padding-top: 28px;
   padding-bottom: 56px;
-  margin-left: auto;
-  margin-right: auto;
 
   @include for-size(mobile) {
     padding-top: 30px;
