@@ -11,34 +11,42 @@
       <div class="container">
         <div class="header__block">
           <div class="header__logo">
-            <img src="./images/film.svg" alt="" />
-            <span class="header__logo--text">Filmoteka</span>
+            <a class="header__link" href="#"
+              ><img src="./images/film.svg" alt="" />
+              <span class="header__text" href="#">Filmoteka </span></a
+            >
           </div>
-          <nav>
-            <ul class="nav__ul main__text">
-              <li class="nav__ul--item">
-                <a href="" class="current-page">Home</a>
-              </li>
-              <li class="nav__ul--item">
-                <a href="my_library.html">my library</a>
-              </li>
-            </ul>
-          </nav>
+
+          <ul class="nav__ul main__text">
+            <li class="nav__ul--item">
+              <a href="" class="current-page">Home</a>
+            </li>
+            <li class="nav__ul--item">
+              <a href="my_library.html">my library</a>
+            </li>
+          </ul>
         </div>
+
         <form
-          action=""
+          class="header__form"
+          action="#"
           name="searchFilm"
           autocomplete="off"
-          class="header__form"
         >
-          <input
-            type="text"
-            placeholder="Поиск фильмов"
-            id="search"
-            class="header__form--input"
-          />
-          <button class="header-btn search-btn-js pagination__btn" ><img src="#" alt=""></button>
+          <div class="header__form-block">
+            <input
+              class="header__form--input"
+              type="text"
+              placeholder="Поиск фильмов"
+              id="search"
+            />
+            <button
+              class="header__form-btn search-btn-js pagination__btn"
+              type="submit"
+            ></button>
+          </div>
         </form>
+
         <p class="header__text--error">
           Search result not successful. Enter the correct movie name and
         </p>
@@ -96,7 +104,7 @@
       </section>
     </main>
 
-    <div class="modal__backdrop is-hidden">
+    <!-- <div class="modal__backdrop is-hidden">
       <div class="modal__wrapper">
         <div class="card__box">
           <div class="card-img">
@@ -141,17 +149,17 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
-        <div class="footer-content">
-          <p class="copyright">© 2020 | All Rights Reserved |</p>
-          <p class="copyright-bottom">
-            Developed with
+        <p class="copyright">
+          &#169; 2020 &#8739; All Rights Reserved &#8739; Developed with
+          <span class="copyright__icon">
             <svg
+              class=""
               width="14"
-              height="13"
+              height="14"
               viewbox="0 0 14 13"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -161,11 +169,11 @@
                 fill="#FF6B08"
               />
             </svg>
-            by
-            <a href="https://goit.ua/" class="students"> GoItStudents</a>
-          </p>
-        </div>
+          </span>
+          by &#8739;
+          <a class="copyright__link" href="#">GoIT Students</a>
+        </p>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>
