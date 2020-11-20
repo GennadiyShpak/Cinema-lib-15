@@ -6,8 +6,6 @@ import handlebars from '../templates/main-page.hbs';
 import animateScrollTo from 'animated-scroll-to';
 import refs from './refs';
 import { Observer } from './intersectionObserver';
+
 //Modal window handler.
 require('./handlerModal');
-
-
-

@@ -20,7 +20,7 @@
                 <a href="" class="current-page">Home</a>
               </li>
               <li class="nav__ul--item">
-                <a href="my_library.html">my library</a>
+                <a class="nav__ul--link" href="my_library.html">my library</a>
               </li>
             </ul>
           </nav>
@@ -46,10 +46,9 @@
         </p>
       </div>
     </header>
-
     <main>
       <section class="container">
-        <h1>Popular films</h1>
+        <h1 class="hidden">Popular films</h1>
 
         <ul class="film__list"></ul>
 
@@ -92,12 +91,11 @@
               <button class="not-active-btn pagination__btn">20</button>
             </li>
           </ul>
-
+          <ul class="watched"></ul>
           <button class="pagination__btn">&#8594;</button>
         </div>
       </section>
     </main>
-
     <div class="modal__backdrop is-hidden">
       <div class="modal__wrapper">
         <div class="card__box">
