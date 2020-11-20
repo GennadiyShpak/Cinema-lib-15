@@ -66,22 +66,10 @@
     transition: color 0.2s linear;
 
     &::after {
+      margin-top: 5px;
       display: block;
-      width: 0%;
+      border-bottom: 3px solid var(--decor-color);
       content: '';
-      height: 3px;
-      background-color: var(--decor-color);
-      position: absolute;
-      bottom: -12px;
-      opacity: 0;
-      visibility: hidden;
-      transition: 0.2s linear;
-    }
-
-    &:hover::after {
-      width: 100%;
-      opacity: 1;
-      visibility: visible;
     }
 
     &:hover,
@@ -96,17 +84,15 @@
   flex-wrap: wrap;
 
   &--item {
+    cursor: pointer;
+    color: var(--header-collor);
+    font-weight: 500;
+    line-height: 1.5;
     text-transform: uppercase;
   }
 
   &--item:not(:last-of-type) {
     margin-right: 40px;
-  }
-
-  a {
-    color: var(--header-collor);
-    font-weight: 500;
-    line-height: 1.5;
   }
 }
 

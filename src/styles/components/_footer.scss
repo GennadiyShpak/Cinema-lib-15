@@ -19,6 +19,11 @@
   letter-spacing: 0.06em;
   color: #545454;
 
+  &__icon-heart {
+    width: 14px;
+    height: 14px;
+  }
+
   &__link {
     display: inline;
   }
