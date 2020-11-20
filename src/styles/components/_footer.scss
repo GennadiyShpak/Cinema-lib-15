@@ -1,51 +1,39 @@
-.footer .container {
+.footer {
   background-color: var(--footer-bg-color);
-  display: block;
-}
-
-.copyright-bottom {
-  display: flex;
-}
-
-.footer-content {
-  font-style: inherit;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  color: #545454;
-
-  padding-top: 30px;
-  padding-bottom: 28px;
   text-align: center;
+}
 
-  @media (max-width: 767px) {
-    padding-top: 28px;
-    padding-bottom: 29px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.footer .container {
+  padding-top: 28px;
+  padding-bottom: 56px;
 
-  @media screen and (min-width: 768px) {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-  }
-
-  @media screen and (min-width: 1024 px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  @include for-size(mobile) {
+    padding-top: 30px;
+    padding-bottom: 28px;
   }
 }
-.students {
-  text-decoration: underline;
+
+.copyright {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
   color: #545454;
-}
 
-.svg_icon {
-  width: 40px;
-  height: 40px;
+  &__icon-heart {
+    width: 14px;
+    height: 14px;
+  }
+
+  &__link {
+    display: inline;
+  }
+
+  @include for-size(tablet) {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  @include for-size(desktop-hd) {
+    font-size: 20px;
+  }
 }

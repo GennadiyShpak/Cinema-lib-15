@@ -42,13 +42,13 @@ constructor() {
     async responceHandler (url) {
         try{
             const responce = await fetch(url)
-            
+
               if (responce.ok) {
                   const data = await responce.json();
                   return data;
               }
               throw new Error (data.statusText);
-        }  
+        }
         catch {
             error=>colsole.log(error)
         }
@@ -76,4 +76,4 @@ constructor() {
     resetInput () {
         this.page =1;
     }
-} 
+}
