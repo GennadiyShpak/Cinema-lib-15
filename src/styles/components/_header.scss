@@ -4,11 +4,11 @@
   background-size: cover;
 }
 
-// .main__background {
-//   background-image: url('../images/header_lib_bg.jpg');
-//   background-position: center;
-//   background-size: cover;
-// }
+ .main__background--mylib {
+   background-image: url('../images/header_lib_bg.jpg');
+   background-position: center;
+   background-size: cover;
+ }
 
 .header {
   padding-top: 46px;
@@ -75,6 +75,10 @@
 .header__logo {
   display: flex;
   align-items: center;
+
+  &:hover{
+    cursor: pointer;
+  }
 
   &--text {
     display: none;
@@ -145,15 +149,19 @@
     line-height: 1.17;
     text-align: center;
     text-transform: uppercase;
+
+    &:hover{
+      cursor: pointer;
+    }
   }
 
   &--item:last-child {
     margin-right: 0px;
   }
 
-  a {
+  /*a {
     color: var(--header-collor);
-  }
+  }*/
 }
 
 .hiddenError {
