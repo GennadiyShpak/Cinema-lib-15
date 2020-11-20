@@ -61,6 +61,13 @@ constructor() {
     set query (newSearchQuery) {
         this.searchQuery=newSearchQuery;
     }
+    get () {
+        return this.page;
+    }
+
+    set (newPage) {
+        this.page=newPage;
+    }
 
     incrementPage () {
         this.page += 1;
