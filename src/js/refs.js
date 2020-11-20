@@ -6,6 +6,7 @@ const refs = {
   watchedGallery: document.querySelector('.film__watched'),
   searchForm: document.querySelector('.header__form'),
   errorMassage: document.querySelector('.header__text--error'),
+  loader: document.querySelector('.loader'),
 };
 
 export default refs;
