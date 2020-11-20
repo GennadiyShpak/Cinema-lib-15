@@ -1,3 +1,11 @@
+onCheckLocalStor('watched');
+onCheckLocalStor('queue');
+function onCheckLocalStor(type) {
+  const store = localStorage.getItem(type);
+  if (!store) {
+    localStorage.setItem(type, JSON.stringify([]));
+  }
+}
 //HANDLER MODAL
 import refs from './refs';
 import MovieService from '../js/apiService';
@@ -11,15 +19,43 @@ const modElems = {
   rating: refs.modal.querySelector('.rating-data'),
   descript: refs.modal.querySelector('.descript-text'),
 };
-
+const modalBtns = {
+  allBtns: document.querySelector('.card-btns'),
+  queue: document.querySelector('.btn-queue'),
+  watched: document.querySelector('.btn-watched'),
+};
+let data = null;
 async function onCardFilmClick(e) {
   if (!e.target.closest('.film__item')) return;
   const current = e.target.closest('.film__item');
-  const data = await getFilmServ.fetchMovieById(current.dataset.id);
+  data = await getFilmServ.fetchMovieById(current.dataset.id);
+  // console.log('data:', data);
   onUpdateModal(data);
-  //---
+  //----
+  const localW = JSON.parse(localStorage.getItem('watched'));
+  const localQ = JSON.parse(localStorage.getItem('queue'));
+  readLocalStor(localW, 'watched');
+  readLocalStor(localQ, 'queue');
+  //----
   refs.modal.classList.remove('is-hidden');
   window.addEventListener('keydown', onEscPress);
+  modalBtns.allBtns.addEventListener('click', onButtonsClick);
+}
+function readLocalStor(localValue, type) {
+  if (localValue.length) {
+    const film = localValue.find(el => el.id == data.id);
+
+    if (film) {
+      modalBtns[type].textContent = film.button.text;
+      modalBtns[type].classList.add('is-active');
+    } else {
+      modalBtns[type].textContent = `add to ${type}`;
+      modalBtns[type].classList.remove('is-active');
+    }
+  } else {
+    modalBtns[type].textContent = `add to ${type}`;
+    modalBtns[type].classList.remove('is-active');
+  }
 }
 function onUpdateModal({
   poster_path,
@@ -44,6 +80,7 @@ function onUpdateModal({
 function onCloseModal() {
   refs.modal.classList.add('is-hidden');
   window.removeEventListener('keydown', onEscPress);
+  modalBtns.allBtns.removeEventListener('click', onButtonsClick);
 }
 
 function onEscPress(e) {
@@ -58,3 +95,35 @@ function onBackdropClick(e) {
   }
 }
 //----------------
+
+//------
+modalBtns.allBtns.addEventListener('click', onButtonsClick);
+function onButtonsClick(e) {
+  if (!e.target.classList.contains('button')) return;
+  e.target.classList.toggle('is-active');
+  if (e.target.classList.contains('is-active')) {
+    e.target.textContent = `delete from ${e.target.dataset.id}`;
+  } else {
+    e.target.textContent = `add to ${e.target.dataset.id}`;
+  }
+
+  data.button = {
+    type: e.target.dataset.id,
+    text: `delete from ${e.target.dataset.id}`,
+    css: 'is-active',
+  };
+  onLocalStorJob(e);
+}
+
+//-------
+function onLocalStorJob(e) {
+  const localData = JSON.parse(localStorage.getItem(e.target.dataset.id));
+  const filmId = localData.map(el => el.id).indexOf(data.id);
+  if (filmId >= 0) {
+    localData.splice(filmId, 1);
+    localStorage.setItem(e.target.dataset.id, JSON.stringify(localData));
+  } else {
+    localData.push(data);
+    localStorage.setItem(e.target.dataset.id, JSON.stringify(localData));
+  }
+}
