@@ -17,7 +17,8 @@
   }
 }
 
-.film__list {
+.film__list,
+.watched {
   display: grid;
   width: 100%;
   grid-gap: 20px;
@@ -103,22 +104,25 @@
   background-color: transparent;
 }
 
-.loader {
-  border: 5px solid #f3f3f3; /* Light grey */
-  border-top: 5px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  animation: spin 2s linear infinite;
-
+.glow {
   margin-left: auto;
   margin-right: auto;
+  font-size: 30px;
+  margin-bottom: 50px;
+  color: black;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
 }
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(84, 187, 84),
+      0 0 40px #25ec25, 0 0 50px #0fffa3, 0 0 60px #7aeb10, 0 0 70px #73e465;
   }
-  100% {
-    transform: rotate(360deg);
+  to {
+    text-shadow: 0 0 30px #fff, 0 0 40px #caff09, 0 0 50px #e7e40d,
+      0 0 50px #f8d50e, 0 0 60px #dad609, 0 0 70px #dfe21b, 0 0 80px #caeb10;
   }
 }
