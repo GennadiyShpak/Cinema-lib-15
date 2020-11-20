@@ -3,7 +3,6 @@
 
   .container {
     padding-top: 46px;
-    padding-bottom: 96px;
     margin-right: auto;
     margin-left: auto;
 
@@ -11,7 +10,6 @@
       padding-top: 42px;
       padding-left: 72px;
       padding-right: 76px;
-      padding-bottom: 60px;
     }
 
     @include for-size(desktop) {
