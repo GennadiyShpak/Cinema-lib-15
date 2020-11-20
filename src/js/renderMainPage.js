@@ -15,4 +15,3 @@ export default async function onLoadPage() {
       const markup = handlebars(films);
       refs.filmGalery.innerHTML = markup;
 };
-
