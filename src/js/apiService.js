@@ -2,7 +2,6 @@
 
 const API_KEY = 'bb3f2a9bd6a374d8a5257ae7f0ad6ee7';
 const BASE_URL = 'https://api.themoviedb.org/3/';
-const urlParms = ['trending/movie/week', 'search/movie'];
 
 export default class MovieService {
 constructor() {
@@ -11,12 +10,12 @@ constructor() {
 }
 
     async fetchMovies () {
-        const url = `${BASE_URL}${urlParms[0]}?api_key=${API_KEY}&page=${this.page}`;
+        const url = `${BASE_URL}trending/movie/week?api_key=${API_KEY}&page=${this.page}`;
         return this.responceHandler(url);
     }
 
     async searchMovie () {
-        const url = `${BASE_URL}${urlParms[1]}?api_key=${API_KEY}&query=${this.searchQuery}`;
+        const url = `${BASE_URL}search/movie?api_key=${API_KEY}&query=${this.searchQuery}`;
         const filmSearchObject=await this.responceHandler(url);
         filmSearchObject.results=filmSearchObject.results.map(film=>{
             return {release_date: film.release_date?film.release_date.split('-')[0]:'',
