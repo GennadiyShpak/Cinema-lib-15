@@ -32,7 +32,7 @@ export default async function onSearch(e) {
     refs.filmGalery.innerHTML = markup;
   }
 
-  async function randerGenreFilm(){
+  export async function randerGenreFilm(){
     const filmItemRefs=document.querySelectorAll('.film__item');    
     Array.from(filmItemRefs).forEach(async filmItemRef => {
       const spanRefs=filmItemRef.querySelector('.film__item--genre');
