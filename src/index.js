@@ -10,4 +10,4 @@ import renderHederHandler from './js/header-logic'
 
 // randerGenreFilm();
 onLoadPage();
-renderHederHandler()
+renderHederHandler();
