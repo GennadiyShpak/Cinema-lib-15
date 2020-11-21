@@ -2,34 +2,22 @@
   <div class="header__block">
     <div class="header__logo">
       <img src="icon.film.svg" alt="" />
-        <span class="header__text" href="#">Filmoteka </span>
+      <span class="header__text" href="#">Filmoteka </span>
     </div>
 
     <nav>
-    <ul class="nav__ul main__text">
-      <li class="nav__ul--item current-page">Home</li>
-      <li class="nav__ul--item">my library</li>
-    </ul>
+      <ul class="nav__ul main__text">
+        <li class="nav__ul--item current-page">Home</li>
+        <li class="nav__ul--item">my library</li>
+      </ul>
     </nav>
   </div>
 
-  <form
-    action=""
-    name="searchFilm"
-    autocomplete="off"
-    class="header__form"
-  >
+  <form action="" name="searchFilm" autocomplete="off" class="header__form">
     <div class="header__form-block">
-      <input
-        class="header__form--input"
-        type="text"
-        placeholder="Поиск фильмов"
-        id="search"
-      />
-      <button
-        class="header__form-btn search-btn-js pagination__btn"
-        type="submit"
-      ></button>
+      <div class="loader"></div>
+      <input class="header__form--input" type="text" placeholder="Поиск фильмов" id="search" />
+      <button class="header__form-btn search-btn-js pagination__btn" type="submit"></button>
     </div>
   </form>
 

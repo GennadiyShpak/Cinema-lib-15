@@ -1,4 +1,4 @@
-  import MovieService from '../js/apiService';
+import MovieService from '../js/apiService';
 import handlebars from '../templates/main-page.hbs';
 import refs from '../js/refs';
 //import filmCardTamplate from '../templates/filmCardTamplate.hbs';
@@ -7,9 +7,9 @@ const searchServices = new MovieService();
 
 async function onSearch(e) {
   e.preventDefault();
-  
-  //const loader = document.querySelector('.loader');
-  //loader.classList.add('active');
+
+  const loader = document.querySelector('.loader');
+  loader.classList.add('active');
   refs.filmGalery.innerHTML = '';
   console.log(refs.searchInput);
   searchServices.query = refs.searchInput.value;
@@ -24,7 +24,7 @@ async function onSearch(e) {
     }
     await renderGalleryFilms(films.results);
     renderGenreFilm();
-    //loader.classList.remove('active');
+    loader.classList.remove('active');
   } catch (err) {
     console.log('onSearch -> err', err);
   }
@@ -44,4 +44,4 @@ async function renderGenreFilm() {
   });
 }
 
-export {onSearch, renderGenreFilm}
+export { onSearch, renderGenreFilm };
