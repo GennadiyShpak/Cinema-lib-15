@@ -31,6 +31,11 @@ async function onSearch(e) {
 }
 
 function renderGalleryFilms(films) {
+  if (films.length===0){
+    refs.massageError.classList.remove('hidden');
+  } else {
+    refs.massageError.classList.add('hidden');
+  }
   const markup = handlebars(films);
   refs.filmGalery.innerHTML = markup;
 }

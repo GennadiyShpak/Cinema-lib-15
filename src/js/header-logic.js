@@ -15,11 +15,9 @@ export default function renderHederHandler () {
     refs.searchInput = document.querySelector('.header__form--input');
     refs.searchForm = document.querySelector('.header__form');
     refs.logo = document.querySelector('.header__logo');
-    console.log("renderHederHandler -> refs.logo", refs.logo)
     refs.nav = document.querySelector('.nav__ul');
-    console.log("renderHederHandler -> refs.nav", refs.nav)
     refs.searchForm.addEventListener('submit', onSearch);
-    console.log(refs.searchForm);
+    refs.massageError=document.querySelector('.header__text--error');
     addListeners();
 }
 
