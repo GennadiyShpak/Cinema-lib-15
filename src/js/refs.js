@@ -8,7 +8,8 @@ const refs = {
   header: document.querySelector('header'),
   body: document.querySelector('body'),
   logo: document.querySelector('.header__logo'),
-  nav: document.querySelector('.nav__ul')
+  nav: document.querySelector('.nav__ul'),
+  footer: document.querySelector('.footer'),
 };
 
 // refs.searchInput = document.querySelector('.header__form--input');
