@@ -1,0 +1,59 @@
+.header__library-btn {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: 320px) {
+
+  }
+}
+
+
+
+// PAGINATION
+.tui-next,
+.tui-last,
+.tui-first,
+.tui-prev {
+  padding-top: 5px !important;
+}
+
+.tui-page-btn {
+  width: 40px !important;
+  height: 40px;
+  border-radius: 5px !important;
+  font-size: 12px;
+  line-height: 16px !important;
+  font-weight: 500 !important;
+}
+
+.tui-is-selected {
+  background-color: var(--decor-color) !important;
+}
+
+.not-active-btn {
+  background-color: transparent;
+}
+
+//ANIMATION
+.glow {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  margin-bottom: 50px;
+  color: black;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(84, 187, 84),
+      0 0 40px #25ec25, 0 0 50px #0fffa3, 0 0 60px #7aeb10, 0 0 70px #73e465;
+  }
+  to {
+    text-shadow: 0 0 30px #fff, 0 0 40px #caff09, 0 0 50px #e7e40d,
+      0 0 50px #f8d50e, 0 0 60px #dad609, 0 0 70px #dfe21b, 0 0 80px #caeb10;
+  }
+}

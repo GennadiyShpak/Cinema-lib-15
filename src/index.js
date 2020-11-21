@@ -6,6 +6,8 @@ import refs from './js/refs';
 import './js/renderMyLibrary';
 import {onSearch, randerGenreFilm} from './js/renderSearchFilm';
 import renderHederHandler from './js/header-logic'
+// если есть 2 импорта внизу, значит забыл убрать удаляйте спокойно %)
+
 
 
 // randerGenreFilm();

@@ -1,4 +1,7 @@
 .header {
+  background: rgba(0, 0, 0, 0.56);
+  background-image: url('../images/header_lib_bg.jpg');
+  @include background-settings(no-repeat, 20%);
   height: 230px;
 
   .container {
@@ -89,6 +92,12 @@
   }
 }
 
+.main__background{
+  background: rgba(0, 0, 0, 0.56);
+  background-image: url('../images/header_background.jpg');
+  @include background-settings(no-repeat, center);
+}
+
 .nav__ul {
   display: flex;
   flex-wrap: wrap;
@@ -104,12 +113,6 @@
   &--item:not(:last-of-type) {
     margin-right: 40px;
   }
-}
-
-.main__background {
-  background: rgba(0, 0, 0, 0.56);
-  background-image: url('../images/header_background.jpg');
-  @include background-settings(no-repeat, 20%);
 }
 
 .header__form {
