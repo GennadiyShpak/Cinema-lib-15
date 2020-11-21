@@ -3,6 +3,7 @@ import handlebars from '../templates/main-page.hbs';
 import refs from '../js/refs';
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
+import {renderGenreFilm } from '../js/renderSearchFilm';
 
 
 const mainPageMarkupHandler = new MovieService();
@@ -12,6 +13,7 @@ const container = document.getElementById('pagination');
 export default async function onLoadPage() {
   const films = await mainPageMarkupHandler.fetchMovies();
   mainPageHandler(films.results);
+  renderGenreFilm();
 }
 
 async function mainPageHandler(films) {
