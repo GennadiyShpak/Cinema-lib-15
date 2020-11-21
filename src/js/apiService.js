@@ -42,7 +42,6 @@ constructor() {
     async responceHandler (url) {
         try{
             const responce = await fetch(url)
-
               if (responce.ok) {
                   const data = await responce.json();
                   return data;
