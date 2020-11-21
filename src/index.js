@@ -5,6 +5,7 @@ import onLoadPage from './js/renderMainPage';
 import refs from './js/refs';
 import './js/renderMyLibrary';
 import onSearch from './js/renderSearchFilm';
+import icon from './images/sprite.svg'
 
 onLoadPage();
 
