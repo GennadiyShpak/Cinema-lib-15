@@ -5,11 +5,13 @@ import refs from '../js/refs';
 
 const searchServices = new MovieService();
 
-export default async function onSearch(e) {
+async function onSearch(e) {
   e.preventDefault();
+
   const loader = document.querySelector('.loader');
   loader.classList.add('active');
   refs.filmGalery.innerHTML = '';
+  console.log(refs.searchInput);
   searchServices.query = refs.searchInput.value;
   if (searchServices.query === '') {
     return;
@@ -21,7 +23,7 @@ export default async function onSearch(e) {
       console.log('За вашим запросом ничего не найдено');
     }
     await renderGalleryFilms(films.results);
-    randerGenreFilm();
+    renderGenreFilm();
     loader.classList.remove('active');
   } catch (err) {
     console.log('onSearch -> err', err);
@@ -29,11 +31,16 @@ export default async function onSearch(e) {
 }
 
 function renderGalleryFilms(films) {
+  if (films.length===0){
+    refs.massageError.classList.remove('hidden');
+  } else {
+    refs.massageError.classList.add('hidden');
+  }
   const markup = handlebars(films);
   refs.filmGalery.innerHTML = markup;
 }
 
-export async function randerGenreFilm() {
+async function renderGenreFilm() {
   const filmItemRefs = document.querySelectorAll('.film__item');
   Array.from(filmItemRefs).forEach(async filmItemRef => {
     const spanRefs = filmItemRef.querySelector('.film__item--genre');
@@ -41,3 +48,5 @@ export async function randerGenreFilm() {
     spanRefs.textContent = genere;
   });
 }
+
+export { onSearch, renderGenreFilm };

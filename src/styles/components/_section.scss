@@ -61,10 +61,6 @@
     height: 100%;
   }
 
-  &-desk-wrapp{
-    // padding: 5px;
-  }
-
   &_title {
     font-size: 20px;
 
@@ -86,18 +82,25 @@
   line-height: 16px;
 }
 
-.pagination__btn {
-  width: 40px;
-  height: 40px;
-  background-color: var(--main-bg-color);
-  border-radius: 5px;
-  font-size: 12px;
-  line-height: 16px;
+.tui-next,
+.tui-last,
+.tui-first,
+.tui-prev {
+  padding-top: 5px !important;
 }
 
-.active {
-  background-color: var(--decor-color);
-  color: white;
+.tui-page-btn {
+  width: 40px !important;
+  height: 40px;
+  border-radius: 5px !important;
+  font-size: 12px;
+  line-height: 16px !important;
+  font-weight: 500 !important;
+}
+
+.tui-is-selected {
+  background-color: var(--decor-color) !important;
+  color: white !important;
 }
 
 .not-active-btn {
