@@ -51,15 +51,24 @@
   }
 }
 .modal__wrapper {
+  position: relative;
   padding: 20px;
   margin: 0 auto;
   width: 320px;
   background-color: var(--header-collor);
-  // outline: 1px solid red;
   border-radius: 10px;
   transform: scale(1);
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+
+//  .modal_btn-close {
+//    background-color: transparent;
+//    position: absolute;
+//    top: 3%;
+//    right: 3%;
+//    font-size: 25px;
+//  }
+
   @media (min-width: 768px) {
     width: 660px;
   }
@@ -199,4 +208,8 @@
     box-shadow: 0px 0px 10px 0px rgb(33, 150, 243);
     color: var(--error-color);
   }
+}
+.modal_btn-close:hover,
+.modal_btn-closefocus {
+  transform: rotate(180deg);
 }
