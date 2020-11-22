@@ -1,5 +1,6 @@
 import templates from '../templates/main-page.hbs';
 import refs from './refs';
+import container from './pagination';
 
 export default function makeLibrayWatched() {
   const queueBtn = document.querySelector('.btn-queue');
@@ -45,4 +46,5 @@ function removeClass(button) {
 }
 function addClass(button) {
   button.classList.add('button-active');
+  container.classList.add('display-none');
 }
