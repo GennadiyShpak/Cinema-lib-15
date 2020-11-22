@@ -3,19 +3,18 @@ import handlebars from '../templates/main-page.hbs';
 import refs from '../js/refs';
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
-import {renderGenreFilm } from '../js/renderSearchFilm';
+import { renderGenreFilm } from '../js/renderSearchFilm';
 // import container from './pagination'
-
 
 const mainPageMarkupHandler = new MovieService();
 const container = document.getElementById('pagination');
-
 
 export default async function onLoadPage() {
   const films = await mainPageMarkupHandler.fetchMovies();
   mainPageHandler(films.results);
   renderGenreFilm();
   container.classList.remove('display-none');
+  refs.wrapper.innerHTML = '';
 }
 
 async function mainPageHandler(films) {
@@ -29,12 +28,11 @@ const pagination = new Pagination(document.getElementById('pagination'), {
   visiblePages: 5,
   centerAlign: true,
 });
-container.addEventListener('click', onBtnClickHandler)
+container.addEventListener('click', onBtnClickHandler);
 
+function onBtnClickHandler(e) {
+  const activePaginationBtn = document.querySelector('.tui-is-selected');
 
-function onBtnClickHandler (e) {
-  const activePaginationBtn = document.querySelector('.tui-is-selected')
-
-    mainPageMarkupHandler.page = activePaginationBtn.textContent;
-    onLoadPage()
+  mainPageMarkupHandler.page = activePaginationBtn.textContent;
+  onLoadPage();
 }
