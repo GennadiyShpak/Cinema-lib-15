@@ -7,11 +7,11 @@ function onCheckLocalStor(type) {
   }
 }
 const modal = document.querySelector('.load__backdrop');
-// modal.addEventListener('click', e => {
-//   if (e.currentTarget === e.target) {
-//     modal.classList.add('is-hidden');
-//   }
-// });
+modal.addEventListener('click', e => {
+  if (e.currentTarget === e.target) {
+    modal.classList.add('is-hidden');
+  }
+});
 //HANDLER MODAL
 import refs from './refs';
 import modalMarkup from '../templates/modal-markup.hbs';
@@ -28,8 +28,18 @@ async function onCardFilmClick(e) {
   modal.classList.remove('is-hidden');
   modal.innerHTML = '<p class = "load-text">loading...</p>';
   const current = e.target.closest('.film__item');
-
-  data = await getFilmServ.fetchMovieById(current.dataset.id);
+  try {
+    data = await getFilmServ.fetchMovieById(current.dataset.id);
+    if (!data) {
+      modal.classList.add('is-hidden');
+      return;
+    }
+    if (!data.poster_path) {
+      data.poster_path = '/k2oBuTKSP0wALtOzH04dCqDfzYQ.jpg';
+    }
+  } catch (error) {
+    console.log(error);
+  }
 
   data.genresStr = data.genres.reduce((acc, el) => acc + el.name + ', ', '');
 
@@ -44,12 +54,16 @@ async function onCardFilmClick(e) {
   refs.modal.innerHTML = modalMarkup(data);
   const modalBtns = document.querySelector('.card-btns');
   const modalImg = document.querySelector('.card-img > img');
+  const modalCloseBtn = document.querySelector(
+    '.modal__wrapper .modal_btn-close ',
+  );
   modalImg.onload = modalImg.onerror = () => {
     modal.classList.add('is-hidden');
     refs.modal.classList.remove('is-hidden');
     window.addEventListener('keydown', onEscPress);
     refs.modal.addEventListener('click', onBackdropClick);
     modalBtns.addEventListener('click', onButtonsClick);
+    modalCloseBtn.addEventListener('click', onCloseModal);
   };
 }
 function readLocalStor(localValue, type) {
