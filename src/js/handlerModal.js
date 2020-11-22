@@ -54,7 +54,9 @@ async function onCardFilmClick(e) {
   refs.modal.innerHTML = modalMarkup(data);
   const modalBtns = document.querySelector('.card-btns');
   const modalImg = document.querySelector('.card-img > img');
-  const modalCloseBtn = document.querySelector('.modal__wrapper .modal-close ');
+  const modalCloseBtn = document.querySelector(
+    '.modal__wrapper .modal_btn-close ',
+  );
   modalImg.onload = modalImg.onerror = () => {
     modal.classList.add('is-hidden');
     refs.modal.classList.remove('is-hidden');
@@ -92,7 +94,6 @@ function onCloseModal() {
   document
     .querySelector('.card-btns')
     .removeEventListener('click', onButtonsClick);
-  // modalCloseBtn.removeEventListener('click', onCloseModal);
 }
 
 function onEscPress(e) {
