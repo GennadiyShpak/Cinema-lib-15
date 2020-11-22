@@ -1,10 +1,15 @@
 {{#each this}}
 <li data-id="{{id}}" class="film__item">
     <div>
+        {{#if backdrop_path}}
         <img class="film__item_picture" src="https://image.tmdb.org/t/p/w220_and_h330_face{{backdrop_path}}"
             alt="{{title}}" />
+        {{else}}
+        <img src="https://www.smallacorn.co.uk/wp-content/uploads/2016/05/small-acorn-photo-of-a-baby-with-a-moustache-for-fun-fact-friday-week-20-babies-grow-moustaches-then-eat-them.jpg"
+            alt="no-photo">
+        {{/if}}
     </div>
-    <div class="film__item-desk-wrapp">
+    <div class=" film__item-desk-wrapp">
         <h3 class="film__item_title">{{title}}</h3>
         <p class="film__item_description"><span class="film__item--genre"></span>{{genre}} {{release_date}}</p>
     </div>
