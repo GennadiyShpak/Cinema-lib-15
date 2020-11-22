@@ -4,29 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Peace, Death, JS</title>
   </head>
 
-  <body></body>
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
+  <body>
+    <header class="header main__background"></header>
+
+    <main>
+      <section class="container movie__container footer-space">
+        <h1 class="section-title hidden">Popular films</h1>
+        <div class="wrapper"></div>
+        <ul class="film__list"></ul>
+        <div id="pagination" class="tui-pagination"></div>
+      </section>
+    </main>
+    <!-- modal -->
+    <div class="modal">
+      <div class="load__backdrop is-hidden"></div>
+      <div class="modal__backdrop is-hidden"></div>
+    </div>
+
+    <div class="scroll-up">
+      <svg viewbox="-2 -2 52 52">
+        <path
+          class="scroll-up__path"
+          d="M24,0
+        a24,24 0 0,1 0,48
+        a24,24 0 0,1 0,-48"
+        />
+      </svg>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
         <p class="copyright">
-          © 2020 | All Rights Reserved |
-        </p>
-        <p class="copyright-bottom">
-          Developed with
-          <use
-            class="icon-heart"
-            href="./img/mobile-sprite.svg#icon-heart_40px"
-          ></use>
+          &#169; 2020 | All Rights Reserved | Developed with
+          <span class="copyright__icon">
+            <svg class="copyright__icon-heart">
+              <use xlink:href="./images/sprite.svg#icon-heart" />
+            </svg>
+          </span>
           by
-          <a href="https://goit.ua/" class="students"> GoItStudents</a>
+          <a class="copyright__link" href="#">GoIT Students</a>
         </p>
       </div>
-    </div>
-  </footer>
-
+    </footer>
   </body>
-
 </html>

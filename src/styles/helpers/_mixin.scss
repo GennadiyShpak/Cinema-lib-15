@@ -1,28 +1,44 @@
-@mixin bg-image($size: cover, $repeat: no-repeat, $pos: center) {
-  background-size: $size;
-  background-repeat: $repeat;
-  background-position: $pos;
-}
-
-@mixin psevdo($display: inline-block, $content: '') {
-  display: $display;
-  content: $content;
-}
-
-@mixin flex-all($type: 'center') {
-  display: flex;
-
-  @if $type== 'center' {
-    justify-content: center;
-    align-items: center;
-  } @else if $type== 'beet-wrap' {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  } @else if $type== 'beet-center' {
-    justify-content: space-between;
-    align-items: center;
-  } @else if $type== 'beet-line' {
-    justify-content: space-between;
-    align-items: baseline;
+@mixin for-size($size) {
+  @if $size == mobile-sm {
+    @media (max-width: 400px) {
+      @content;
+    }
+  } @else if $size == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  } @else if $size == desktop-hd {
+    @media (min-width: 1680px) {
+      @content;
+    }
   }
+}
+
+@mixin background-settings(
+  $repeat: no-repeat,
+  $position: center,
+  $size: cover
+) {
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+}
+
+@mixin pseudo($width, $height, $content: '') {
+  content: $content;
+  width: $width;
+  height: $height;
+}
+
+@mixin flex($justify: center) {
+  display: flex;
+  justify-content: $justify;
 }

@@ -8,10 +8,15 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  padding: 0;
+  margin: 0;
+}
+
 img,
 video {
   display: block;
-  // max-width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -102,4 +107,25 @@ input[type='radio'].visually-hidden {
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+.container {
+  margin: 0 auto 0 auto;
+  padding: 0 20px 0 20px;
+
+  @include for-size(mobile-sm) {
+    max-width: 400px;
+  }
+  @include for-size(mobile) {
+    max-width: 767px;
+  }
+  @include for-size(tablet) {
+    width: 768px;
+  }
+  @include for-size(desktop) {
+    width: 1024px;
+  }
+  @include for-size(desktop-hd) {
+    width: 1680px;
+  }
 }

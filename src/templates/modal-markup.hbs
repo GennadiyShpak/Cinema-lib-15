@@ -1,0 +1,52 @@
+    {{!-- <div class="modal__backdrop is-hidden"> --}}
+      <div class="modal__wrapper">
+        <div class="card__box">
+          <button class="modal_btn-close" type="button">
+            <i class="fas fa-times"></i>
+          </button>
+
+
+          <div class="card-img">
+            <img class="" src="https://image.tmdb.org/t/p/w400{{poster_path}}" width="280" alt="{{title}}" />
+          </div>
+
+          <div>
+            <div class="card-header">
+              <h1 class="card-title">{{title}}</h1>
+            </div>
+
+            <div class="rating">
+              <ul class="rating-title">
+                <li>Vote / Votes</li>
+                <li>Popularity</li>
+                <li>Original Title</li>
+                <li>Genre</li>
+              </ul>
+              <ul class="rating-data">
+                <li>
+                  <span class="first">{{vote_average}}</span> /
+                  <span class="second">{{vote_count}}</span>
+                </li>
+                <li>{{popularity}}</li>
+                <li>{{original_title}}</li>
+                <li>{{genresStr}}</li>
+              </ul>
+            </div>
+
+            <div class="descript">
+              <p class="descript-title">About</p>
+              <p class="descript-text">{{overview}}</p>
+            </div>
+
+            <div class="card-btns">
+              <button data-id="watched" class="button btn-watched {{buttons.watched.css}}">
+                {{buttons.watched.text}}
+              </button>
+              <button data-id="queue" class="button btn-queue {{buttons.queue.css}}">
+                {{buttons.queue.text}}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{!-- </div> --}}

@@ -50,6 +50,7 @@
     "webpackbar": "^4.0.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "animated-scroll-to": "^2.0.12",
     "axios": "^0.21.0",
     "basiclightbox": "^5.0.3",
@@ -57,6 +58,7 @@
     "handlebars": "^4.7.6",
     "infinite-scroll": "^3.0.6",
     "lodash.debounce": "^4.0.8",
-    "material-design-icons": "^3.0.1"
+    "material-design-icons": "^3.0.1",
+    "tui-pagination": "^3.4.0"
   }
 }

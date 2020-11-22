@@ -1,0 +1,20 @@
+#pagination {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tui-page-btn {
+  border-radius: 5px !important;
+  transition: all 250ms linear !important;
+
+  &:focus,
+  &:hover {
+    transform: scale(1.15) !important;
+    background: #4b96e6 !important;
+    border-color: #4b96e6 !important;
+  }
+}
+
+.tui-is-selected {
+  background-color: var(--decor-color) !important;
+}
