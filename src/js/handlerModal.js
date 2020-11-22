@@ -94,7 +94,6 @@ function onCloseModal() {
   document
     .querySelector('.card-btns')
     .removeEventListener('click', onButtonsClick);
-  // modalCloseBtn.removeEventListener('click', onCloseModal);
 }
 
 function onEscPress(e) {
