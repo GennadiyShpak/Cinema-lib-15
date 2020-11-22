@@ -1,0 +1,47 @@
+.scroll-up {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  color: rgb(220, 220, 220);
+  cursor: pointer;
+  border-radius: 50px;
+  visibility: hidden;
+  box-shadow: inset 0 0 0 4px rgb(220, 220, 220);
+  opacity: 0;
+  transition: 0.2s;
+  transform: translateY(25px);
+}
+
+.scroll-up::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  content: '\2191';
+}
+
+.scroll-up:hover {
+  color: rgb(265, 61, 0);
+}
+
+.scroll-up.is-active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.scroll-up__path {
+  box-sizing: border-box;
+  fill: none;
+  stroke: rgb(265, 61, 0);
+  stroke-width: 4px;
+  transition: 0.2s;
+}

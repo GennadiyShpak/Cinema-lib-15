@@ -13,6 +13,14 @@
   }
 }
 
+.footer-space {
+  min-height: calc(100vh - 332px);
+
+  @media (min-width: 510px) {
+    min-height: calc(100vh - 310px);
+  }
+}
+
 .copyright {
   font-size: 14px;
   line-height: 1.5;
@@ -26,6 +34,15 @@
 
   &__link {
     display: inline;
+
+    color: var(--error-color);
+    font-weight: 600;
+    transition: all 250ms linear;
+
+    &:focus,
+    &:hover {
+      color: #545454;
+    }
   }
 
   @include for-size(tablet) {

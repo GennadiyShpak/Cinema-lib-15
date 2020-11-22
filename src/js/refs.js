@@ -7,7 +7,8 @@ const refs = {
   header: document.querySelector('header'),
   body: document.querySelector('body'),
   logo: document.querySelector('.header__logo'),
-  nav: document.querySelector('.nav__ul')
+  nav: document.querySelector('.nav__ul'),
+  scrollBackBtn: document.querySelector('.scroll-up'),
 };
 
 export default refs;
