@@ -1,4 +1,5 @@
 import templates from '../templates/main-page.hbs';
+import refs from './refs';
 
 export default function makeLibrayWatched() {
   const queueBtn = document.querySelector('.btn-queue');
@@ -30,7 +31,7 @@ function makeMarkup(data) {
   const watchedList = document.querySelector('.film__watched');
 
   if (data.length === 0) {
-    watchedList.innerHTML =
+    refs.wrapper.innerHTML =
       '<p class="glow">List is empty. Add some films </p>';
     return;
   }
