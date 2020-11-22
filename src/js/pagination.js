@@ -22,3 +22,4 @@ const pagination = new Pagination(document.getElementById('pagination'), {
       mainPageMarkupHandler.page = a.textContent;
       onLoadPage()
   };
+  export default container

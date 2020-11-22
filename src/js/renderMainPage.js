@@ -4,6 +4,7 @@ import refs from '../js/refs';
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
 import {renderGenreFilm } from '../js/renderSearchFilm';
+// import container from './pagination'
 
 
 const mainPageMarkupHandler = new MovieService();
@@ -14,6 +15,7 @@ export default async function onLoadPage() {
   const films = await mainPageMarkupHandler.fetchMovies();
   mainPageHandler(films.results);
   renderGenreFilm();
+  container.classList.remove('display-none');
 }
 
 async function mainPageHandler(films) {
