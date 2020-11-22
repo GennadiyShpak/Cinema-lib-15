@@ -6,9 +6,10 @@ refs.closeBtn.addEventListener('click', onCloseTeamModal);
 
 function onStudentBtnClick() {
   refs.teamModal.classList.remove('is-hidden');
-  window.addEventListener('keydown', onEscPress);
+  document.addEventListener('keydown', onEscPress);
+  console.log(onStudentBtnClick);
 }
-
+console.log(onStudentBtnClick);
 function onCloseTeamModal() {
   refs.teamModal.classList.add('is-hidden');
 }
