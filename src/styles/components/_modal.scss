@@ -29,6 +29,10 @@
 .modal__backdrop {
   width: 100%;
   height: 100%;
+
+  @media (max-width: 320px) {
+    padding: 0px;
+  }
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.5);
   overflow-y: scroll;
@@ -61,14 +65,16 @@
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 
-//  .modal_btn-close {
-//    background-color: transparent;
-//    position: absolute;
-//    top: 3%;
-//    right: 3%;
-//    font-size: 25px;
-//  }
-
+  //  .modal_btn-close {
+  //    background-color: transparent;
+  //    position: absolute;
+  //    top: 3%;
+  //    right: 3%;
+  //    font-size: 25px;
+  //  }
+  @media (min-width: 320px) {
+    // padding: 20px;
+  }
   @media (min-width: 768px) {
     width: 660px;
   }
