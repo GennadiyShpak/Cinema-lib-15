@@ -13,9 +13,9 @@ async function onSearch(e) {
   refs.filmGalery.innerHTML = '';
   console.log(refs.searchInput);
   searchServices.query = refs.searchInput.value;
-  if (searchServices.query === '') {
-    return;
-  }
+  // if (searchServices.query === '') {
+  //   return;
+  // }
 
   try {
     const films = await searchServices.searchMovie();
