@@ -1,5 +1,6 @@
 import templates from '../templates/main-page.hbs';
-import container from './pagination'
+import refs from './refs';
+import container from './pagination';
 
 export default function makeLibrayWatched() {
   const queueBtn = document.querySelector('.btn-queue');
@@ -31,11 +32,12 @@ function makeMarkup(data) {
   const watchedList = document.querySelector('.film__watched');
 
   if (data.length === 0) {
-    watchedList.innerHTML =
+    watchedList.innerHTML = '';
+    refs.wrapper.innerHTML =
       '<p class="glow">List is empty. Add some films </p>';
     return;
   }
-
+  refs.wrapper.innerHTML = '';
   watchedList.innerHTML = templates(data);
 }
 
@@ -46,4 +48,3 @@ function addClass(button) {
   button.classList.add('button-active');
   container.classList.add('display-none');
 }
-

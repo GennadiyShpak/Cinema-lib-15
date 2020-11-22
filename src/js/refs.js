@@ -10,6 +10,7 @@ const refs = {
   nav: document.querySelector('.nav__ul'),
   footer: document.querySelector('.footer'),
   scrollBackBtn: document.querySelector('.scroll-up'),
+  wrapper: document.querySelector('.wrapper'),
 };
 
 export default refs;
