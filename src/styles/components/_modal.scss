@@ -59,12 +59,22 @@
   border-radius: 10px;
   transform: scale(1);
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-
+  position: relative;
   @media (min-width: 768px) {
     width: 660px;
   }
   @media (min-width: 1024px) {
     width: 920px;
+  }
+  .modal-close {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: inherit;
+    border: 1px solid black;
   }
 }
 //--
