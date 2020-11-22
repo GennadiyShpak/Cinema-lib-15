@@ -108,6 +108,35 @@ function onButtonsClick(e) {
     css: 'is-active',
   };
   onLocalStorJob(e);
+  // document.querySelector('.header').classList.contains('main__background--mylib')
+  // if (refs.filmGalery.classList.contains('film__watched')) {
+  if (
+    document
+      .querySelector('.header')
+      .classList.contains('main__background--mylib')
+  ) {
+    const currentTab = document.querySelector(
+      '.main__background--mylib .button-active',
+    );
+    if (e.target.dataset.id == currentTab.dataset.id) {
+      // console.log('tyt');
+      const info = JSON.parse(localStorage.getItem(e.target.dataset.id));
+      makeMarkup(info);
+    }
+  }
+}
+//----
+import templates from '../templates/main-page.hbs';
+function makeMarkup(data) {
+  const watchedList = document.querySelector('.film__watched');
+
+  if (data.length === 0) {
+    watchedList.innerHTML =
+      '<p class="glow">List is empty. Add some films </p>';
+    return;
+  }
+
+  watchedList.innerHTML = templates(data);
 }
 //-------
 function onLocalStorJob(e) {

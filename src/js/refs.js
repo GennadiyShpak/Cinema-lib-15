@@ -11,6 +11,7 @@ const refs = {
   logo: document.querySelector('.header__logo'),
   nav: document.querySelector('.nav__ul'),
   footer: document.querySelector('.footer'),
+  scrollBackBtn: document.querySelector('.scroll-up'),
 };
 
 export default refs;
