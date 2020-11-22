@@ -110,8 +110,9 @@ input[type='radio'].visually-hidden {
 }
 
 .container {
-  margin-left: 0 auto;
+  margin: 0 auto 0 auto;
   padding: 0 20px 0 20px;
+
   @include for-size(mobile-sm) {
     max-width: 400px;
   }
