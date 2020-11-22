@@ -1,7 +1,7 @@
 import MovieService from '../js/apiService';
-import handlebars from '../templates/main-page.hbs';
+import handlebars from '../templates//search-page.hbs';
 import refs from '../js/refs';
-//import filmCardTamplate from '../templates/filmCardTamplate.hbs';
+import container from './pagination'
 
 const searchServices = new MovieService();
 
@@ -11,17 +11,16 @@ async function onSearch(e) {
   const loader = document.querySelector('.loader');
   loader.classList.add('active');
   refs.filmGalery.innerHTML = '';
-  console.log(refs.searchInput);
   searchServices.query = refs.searchInput.value;
-  // if (searchServices.query === '') {
-  //   return;
-  // }
+  container.classList.add('display-none');
+  if (searchServices.query === '') {
+    refs.massageError.classList.remove('hidden');
+    loader.classList.remove('active');
+    return;
+  }
 
   try {
     const films = await searchServices.searchMovie();
-    if (films.length === 0) {
-      console.log('За вашим запросом ничего не найдено');
-    }
     await renderGalleryFilms(films.results);
     renderGenreFilm();
     loader.classList.remove('active');

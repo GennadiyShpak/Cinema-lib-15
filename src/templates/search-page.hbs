@@ -1,0 +1,12 @@
+{{#each this}}
+<li data-id="{{id}}" class="film__item">
+    <div>
+        <img class="film__item_picture" src="https://image.tmdb.org/t/p/w220_and_h330_face{{backdrop_path}}"
+            alt="{{title}}" />
+    </div>
+    <div class="film__item-desk-wrapp">
+        <h3 class="film__item_title">{{title}}</h3>
+        <p class="film__item_description"><span class="film__item--genre"></span>{{genre}} {{release_date}}</p>
+    </div>
+</li>
+{{/each}}
