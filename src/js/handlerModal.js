@@ -131,11 +131,12 @@ function makeMarkup(data) {
   const watchedList = document.querySelector('.film__watched');
 
   if (data.length === 0) {
-    watchedList.innerHTML =
+    watchedList.innerHTML = '';
+    refs.wrapper.innerHTML =
       '<p class="glow">List is empty. Add some films </p>';
     return;
   }
-
+  refs.wrapper.innerHTML = '';
   watchedList.innerHTML = templates(data);
 }
 //-------
