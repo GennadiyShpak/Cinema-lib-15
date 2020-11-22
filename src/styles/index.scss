@@ -6,7 +6,10 @@
 @import 'styles';
 
 // COMPONENTS
+@import 'components/scroll';
 @import 'components/header';
+@import 'components/library';
 @import 'components/section';
+@import 'components/pagination';
 @import 'components/footer';
 @import 'components/modal';
