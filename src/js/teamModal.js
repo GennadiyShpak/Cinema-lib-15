@@ -1,4 +1,5 @@
 import refs from './refs';
+export { onStudentBtnClick, onBackdropClick, onCloseTeamModal };
 
 refs.studentBtnClick.addEventListener('click', onStudentBtnClick);
 refs.teamModal.addEventListener('click', onBackdropClick);
