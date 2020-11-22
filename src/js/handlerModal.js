@@ -6,81 +6,80 @@ function onCheckLocalStor(type) {
     localStorage.setItem(type, JSON.stringify([]));
   }
 }
+const modal = document.querySelector('.load__backdrop');
+// modal.addEventListener('click', e => {
+//   if (e.currentTarget === e.target) {
+//     modal.classList.add('is-hidden');
+//   }
+// });
 //HANDLER MODAL
 import refs from './refs';
+import modalMarkup from '../templates/modal-markup.hbs';
 import MovieService from '../js/apiService';
+
 refs.filmGalery.addEventListener('click', onCardFilmClick);
-refs.modal.addEventListener('click', onBackdropClick);
 
 const getFilmServ = new MovieService();
-const modElems = {
-  img: refs.modal.querySelector('.card-img > img'),
-  title: refs.modal.querySelector('.card-title'),
-  rating: refs.modal.querySelector('.rating-data'),
-  descript: refs.modal.querySelector('.descript-text'),
-};
-const modalBtns = {
-  allBtns: document.querySelector('.card-btns'),
-  queue: document.querySelector('.btn-queue'),
-  watched: document.querySelector('.btn-watched'),
-};
+
 let data = null;
+
 async function onCardFilmClick(e) {
   if (!e.target.closest('.film__item')) return;
+  modal.classList.remove('is-hidden');
+  modal.innerHTML = '<p class = "load-text">loading...</p>';
   const current = e.target.closest('.film__item');
+
   data = await getFilmServ.fetchMovieById(current.dataset.id);
-  // console.log('data:', data);
-  onUpdateModal(data);
-  //----
+
+  data.genresStr = data.genres.reduce((acc, el) => acc + el.name + ', ', '');
+
   const localW = JSON.parse(localStorage.getItem('watched'));
   const localQ = JSON.parse(localStorage.getItem('queue'));
-  readLocalStor(localW, 'watched');
+  ///---------------------
+  data.buttons = {};
+
   readLocalStor(localQ, 'queue');
-  //----
-  refs.modal.classList.remove('is-hidden');
-  window.addEventListener('keydown', onEscPress);
-  modalBtns.allBtns.addEventListener('click', onButtonsClick);
+  readLocalStor(localW, 'watched');
+
+  refs.modal.innerHTML = modalMarkup(data);
+  const modalBtns = document.querySelector('.card-btns');
+  const modalImg = document.querySelector('.card-img > img');
+  modalImg.onload = modalImg.onerror = () => {
+    modal.classList.add('is-hidden');
+    refs.modal.classList.remove('is-hidden');
+    window.addEventListener('keydown', onEscPress);
+    refs.modal.addEventListener('click', onBackdropClick);
+    modalBtns.addEventListener('click', onButtonsClick);
+  };
 }
 function readLocalStor(localValue, type) {
   if (localValue.length) {
     const film = localValue.find(el => el.id == data.id);
-
     if (film) {
-      modalBtns[type].textContent = film.button.text;
-      modalBtns[type].classList.add('is-active');
+      data.buttons[type] = {
+        text: film.buttons[type].text,
+        css: film.buttons[type].css,
+      };
     } else {
-      modalBtns[type].textContent = `add to ${type}`;
-      modalBtns[type].classList.remove('is-active');
+      data.buttons[type] = {
+        text: `add to ${type}`,
+        css: ``,
+      };
     }
   } else {
-    modalBtns[type].textContent = `add to ${type}`;
-    modalBtns[type].classList.remove('is-active');
+    data.buttons[type] = {
+      text: `add to ${type}`,
+      css: ``,
+    };
   }
-}
-function onUpdateModal({
-  poster_path,
-  title,
-  vote_average,
-  vote_count,
-  popularity,
-  original_title,
-  genres,
-  overview,
-}) {
-  modElems.img.src = `https://image.tmdb.org/t/p/w400${poster_path}`;
-  modElems.title.textContent = title;
-  modElems.rating.children[0].firstElementChild.textContent = vote_average;
-  modElems.rating.children[0].lastElementChild.textContent = vote_count;
-  modElems.rating.children[1].textContent = popularity;
-  modElems.rating.children[2].textContent = original_title;
-  modElems.rating.children[3].textContent = genres[0].name;
-  modElems.descript.textContent = overview;
 }
 
 function onCloseModal() {
   refs.modal.classList.add('is-hidden');
   window.removeEventListener('keydown', onEscPress);
-  modalBtns.allBtns.removeEventListener('click', onButtonsClick);
+  document
+    .querySelector('.card-btns')
+    .removeEventListener('click', onButtonsClick);
 }
 
 function onEscPress(e) {
@@ -95,9 +94,6 @@ function onBackdropClick(e) {
   }
 }
 //----------------
-
-//------
-modalBtns.allBtns.addEventListener('click', onButtonsClick);
 function onButtonsClick(e) {
   if (!e.target.classList.contains('button')) return;
   e.target.classList.toggle('is-active');
@@ -107,14 +103,12 @@ function onButtonsClick(e) {
     e.target.textContent = `add to ${e.target.dataset.id}`;
   }
 
-  data.button = {
-    type: e.target.dataset.id,
+  data.buttons[e.target.dataset.id] = {
     text: `delete from ${e.target.dataset.id}`,
     css: 'is-active',
   };
   onLocalStorJob(e);
 }
-
 //-------
 function onLocalStorJob(e) {
   const localData = JSON.parse(localStorage.getItem(e.target.dataset.id));

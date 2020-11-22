@@ -8,6 +8,7 @@ const refs = {
   body: document.querySelector('body'),
   logo: document.querySelector('.header__logo'),
   nav: document.querySelector('.nav__ul'),
+  footer: document.querySelector('.footer'),
   scrollBackBtn: document.querySelector('.scroll-up'),
 };
 
