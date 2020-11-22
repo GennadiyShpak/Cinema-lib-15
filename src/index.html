@@ -13,61 +13,21 @@
       <section class="container movie__container">
         <h1 class="section-title hidden">Popular films</h1>
 
-        <ul class="film__list"></ul> 
+        <ul class="film__list"></ul>
         <div id="pagination" class="tui-pagination"></div>
       </section>
     </main>
-    <div class="modal__backdrop is-hidden">
-      <div class="modal__wrapper">
-        <div class="card__box">
-          <div class="card-img">
-            <img class="" src="#" width="280" alt="movie 1" />
-          </div>
-          <div>
-            <div class="card-header">
-              <h1 class="card-title">TITLE</h1>
-            </div>
-            <div class="rating">
-              <ul class="rating-title">
-                <li>Vote / Votes</li>
-                <li>Popularity</li>
-                <li>Original Title</li>
-                <li>Genre</li>
-              </ul>
-              <ul class="rating-data">
-                <li>
-                  <span class="first">1</span> /
-                  <span class="second">1</span>
-                </li>
-                <li>1</li>
-                <li>Title</li>
-                <li>Genre</li>
-              </ul>
-            </div>
-            <div class="descript">
-              <p class="descript-title">About</p>
-              <p class="descript-text">Description</p>
-            </div>
-            <div class="card-btns">
-              <button data-id="watched" class="button btn-watched">
-                ADD TO WATCHED
-              </button>
-              <button data-id="queue" class="button btn-queue">
-                ADD TO QUEUE
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="modal">
+      <div class="load__backdrop is-hidden"></div>
+      <div class="modal__backdrop is-hidden"></div>
     </div>
-
     <footer class="footer">
       <div class="container">
         <p class="copyright">
           &#169; 2020 &#8739; All Rights Reserved &#8739; Developed with
           <span class="copyright__icon">
             <svg class="copyright__icon-heart">
-              <use xlink:href="./images/sprite.svg#icon-heart"/>
+              <use xlink:href="./images/sprite.svg#icon-heart" />
             </svg>
           </span>
           by &#8739;
